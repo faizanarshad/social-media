@@ -19,17 +19,14 @@ class WebsiteEnhancer {
 
     setupLoadingScreen() {
         const loadingScreen = document.getElementById('loading-screen');
-        
-        // Simulate loading time
-        setTimeout(() => {
-            this.isLoading = false;
-            loadingScreen.classList.add('hidden');
-            
-            // Remove loading screen after animation
+        if (!loadingScreen) return;
+
+        // Give a moment for the page to render before fading out
+        window.addEventListener('load', () => {
             setTimeout(() => {
-                loadingScreen.style.display = 'none';
-            }, 500);
-        }, 2000);
+                loadingScreen.classList.add('hidden');
+            }, 500); // Small delay to ensure content is ready
+        });
     }
 
     setupThemeSystem() {
@@ -182,27 +179,51 @@ class WebsiteEnhancer {
     setupNavigation() {
         const hamburger = document.querySelector('.hamburger');
         const navMenu = document.querySelector('.nav-menu');
+        const navLinks = document.querySelectorAll('.nav-link');
+        const loadingScreen = document.getElementById('loading-screen');
 
         hamburger.addEventListener('click', () => {
             hamburger.classList.toggle('active');
             navMenu.classList.toggle('active');
         });
 
-        // Close mobile menu when clicking on a link
-        document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', () => {
-            hamburger.classList.remove('active');
-            navMenu.classList.remove('active');
-        }));
+        // Handle page transitions
+        navLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                const href = link.getAttribute('href');
+                const isCurrentPage = window.location.pathname.endsWith(href) || (window.location.pathname.endsWith('/') && href === 'index.html');
 
-        // Smooth scrolling for navigation links
+                if (href.startsWith('#') || isCurrentPage) {
+                    hamburger.classList.remove('active');
+                    navMenu.classList.remove('active');
+                    // Allow default behavior for anchor links
+                    if (href.startsWith('#')) {
+                       // The smooth scroll logic will handle this
+                    }
+                    return;
+                }
+
+                e.preventDefault();
+                loadingScreen.classList.remove('hidden');
+
+                setTimeout(() => {
+                    window.location.href = href;
+                }, 400); // Match this to CSS transition time
+            });
+        });
+
+        // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80, // Adjusted for navbar height
+                        behavior: 'smooth'
                     });
                 }
             });

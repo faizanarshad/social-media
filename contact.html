@@ -10,36 +10,149 @@
     <meta property="og:description" content="Start your AI journey with Qbrix Solution. Contact us for AI and data science solutions.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://qbrixsolution.com/contact">
-    <title>Contact - Qbrix Solution</title>
+    <title>Contact Us - Qbrix Solution</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <style>
+        body {
+            background-color: #111;
+            color: #fff;
+        }
+
+        #contact-3d-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        .contact-hero {
+            position: relative;
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .contact-content-wrapper {
+            position: relative;
+            z-index: 2;
+            padding: 100px 0;
+            background: rgba(17, 17, 17, 0.8);
+            backdrop-filter: blur(10px);
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            margin-left: -15px;
+            margin-right: -15px;
+        }
+
+        .col-lg-6 {
+            width: 100%;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+
+        @media (min-width: 992px) {
+            .col-lg-6 {
+                flex: 0 0 50%;
+                max-width: 50%;
+            }
+        }
+
+        .contact-form-modern {
+            background: #222;
+            padding: 50px;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+        }
+
+        .contact-form-modern .form-group input,
+        .contact-form-modern .form-group textarea {
+            background: #333;
+            border: 1px solid #555;
+            color: #fff;
+            border-radius: 8px;
+        }
+        
+        .contact-form-modern .form-group input::placeholder,
+        .contact-form-modern .form-group textarea::placeholder {
+            color: #aaa;
+        }
+
+        .contact-info-modern .contact-item {
+            background: #222;
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+        }
+        
+        .contact-info-modern .contact-item .contact-icon {
+            font-size: 24px;
+            margin-right: 20px;
+        }
+
+        .contact-info-modern .contact-item:hover {
+            transform: translateY(-5px);
+            background: #333;
+        }
+
+        .whatsapp-fab {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background-color: #25D366;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+        
+        .whatsapp-fab:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.5);
+        }
+    </style>
     <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🤖</text></svg>">
 </head>
-<body>
+<body class="dark-theme">
+    <canvas id="contact-3d-bg"></canvas>
+
     <!-- Loading Screen -->
     <div id="loading-screen" class="loading-screen">
         <div class="loading-content">
             <div class="loading-logo">
-                <div class="logo-animation">
-                    <i class="fas fa-brain"></i>
-                </div>
+                <div class="logo-animation"><i class="fas fa-brain"></i></div>
                 <h2>Qbrix Solution</h2>
             </div>
-            <div class="loading-bar">
-                <div class="loading-progress"></div>
-            </div>
-            <p class="loading-text">Loading Contact Page...</p>
+            <div class="loading-bar"><div class="loading-progress"></div></div>
+            <p class="loading-text">Loading Secure Contact Portal...</p>
         </div>
     </div>
-    <div id="particles-js"></div>
+    
+    <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
-                <div class="logo-icon">
-                    <i class="fas fa-brain"></i>
-                </div>
+                <div class="logo-icon"><i class="fas fa-brain"></i></div>
                 <h2>Qbrix Solution</h2>
             </div>
             <ul class="nav-menu">
@@ -51,65 +164,63 @@
                 <li class="nav-item"><a href="contact.html" class="nav-link active" aria-current="page">Contact</a></li>
             </ul>
             <div class="nav-actions">
-                <button class="theme-toggle" aria-label="Toggle dark mode"><i class="fas fa-moon"></i></button>
-                <div class="hamburger" aria-label="Toggle navigation menu">
+                <button class="theme-toggle" aria-label="Toggle dark mode"><i class="fas fa-sun"></i></button>
+                <div class="hamburger">
                     <span class="bar"></span><span class="bar"></span><span class="bar"></span>
                 </div>
             </div>
         </div>
     </nav>
-    <section class="page-hero">
+    
+    <!-- Hero Section -->
+    <section class="contact-hero">
         <div class="hero-content">
-            <div class="hero-badge"><span class="badge-icon">📞</span><span>Contact</span></div>
-            <h1 class="hero-title">Start Your <span class="gradient-text">AI Journey</span></h1>
-            <p class="hero-description">Ready to transform your business with artificial intelligence? Let's discuss your AI and data science needs.</p>
+            <h1 class="hero-title">Get in Touch</h1>
+            <p class="hero-description">We'd love to hear from you. Let's build the future together.</p>
         </div>
     </section>
-    <section class="contact">
+
+    <div class="contact-content-wrapper">
         <div class="container">
-            <div class="section-header">
-                <h2>Contact Us</h2>
-                <p>Reach out to our AI and data science experts</p>
-            </div>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
-                        <div class="contact-details"><h3>Address</h3><p>123 AI Innovation District<br>Tech City, State 12345</p></div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon"><i class="fas fa-phone"></i></div>
-                        <div class="contact-details"><h3>Phone</h3><p>+1 (555) 123-4567</p></div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon"><i class="fas fa-envelope"></i></div>
-                        <div class="contact-details"><h3>Email</h3><p>ai@qbrixsolution.com</p></div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon"><i class="fas fa-clock"></i></div>
-                        <div class="contact-details"><h3>Business Hours</h3><p>Monday - Friday: 9:00 AM - 6:00 PM<br>Saturday: 10:00 AM - 4:00 PM</p></div>
+            <div class="row">
+                <div class="col-lg-6 mb-5 mb-lg-0">
+                    <div class="contact-info-modern">
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <div><h3>Our Location</h3><p>123 AI Innovation District, Tech City</p></div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fas fa-envelope-open-text"></i></div>
+                            <div><h3>Email Us</h3><p>ai@qbrixsolution.com</p></div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
+                            <div><h3>Call Us</h3><p>+1 (555) 123-4567</p></div>
+                        </div>
                     </div>
                 </div>
-                <div class="contact-form">
-                    <form id="contactForm">
-                        <div class="form-group">
-                            <input type="text" id="name" name="name" placeholder="Your Name" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" id="email" name="email" placeholder="Your Email" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" id="subject" name="subject" placeholder="AI Project Type" required>
-                        </div>
-                        <div class="form-group">
-                            <textarea id="message" name="message" placeholder="Describe your AI/ML requirements" rows="5" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Start AI Project</button>
-                    </form>
+                <div class="col-lg-6">
+                    <div class="contact-form-modern">
+                        <h2 class="mb-4">Send a Message</h2>
+                        <form id="contactForm">
+                            <div class="form-group mb-3"><input type="text" class="form-control" placeholder="Your Name" required></div>
+                            <div class="form-group mb-3"><input type="email" class="form-control" placeholder="Your Email" required></div>
+                            <div class="form-group mb-3"><input type="text" class="form-control" placeholder="Subject" required></div>
+                            <div class="form-group mb-4"><textarea class="form-control" rows="5" placeholder="Your Message" required></textarea></div>
+                            <button type="submit" class="btn btn-primary w-100">Send Message</button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+
+    <!-- WhatsApp FAB -->
+    <a href="https://wa.me/15551234567" class="whatsapp-fab" target="_blank" aria-label="Contact us on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    
+    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
@@ -155,6 +266,43 @@
             </div>
         </div>
     </footer>
+
     <script src="script.js"></script>
+    <script>
+        // 3D Background
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+        const renderer = new THREE.WebGLRenderer({ canvas: document.getElementById('contact-3d-bg'), alpha: true });
+        renderer.setSize(window.innerWidth, window.innerHeight);
+
+        const starsGeometry = new THREE.BufferGeometry();
+        const starsMaterial = new THREE.PointsMaterial({ color: 0xffffff, size: 0.7 });
+        const starVertices = [];
+        for (let i = 0; i < 10000; i++) {
+            const x = (Math.random() - 0.5) * 2000;
+            const y = (Math.random() - 0.5) * 2000;
+            const z = (Math.random() - 0.5) * 2000;
+            starVertices.push(x, y, z);
+        }
+        starsGeometry.setAttribute('position', new THREE.Float32BufferAttribute(starVertices, 3));
+        const stars = new THREE.Points(starsGeometry, starsMaterial);
+        scene.add(stars);
+
+        camera.position.z = 5;
+
+        function animate() {
+            requestAnimationFrame(animate);
+            stars.rotation.x += 0.0001;
+            stars.rotation.y += 0.0002;
+            renderer.render(scene, camera);
+        }
+        animate();
+
+        window.addEventListener('resize', () => {
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+        });
+    </script>
 </body>
 </html>

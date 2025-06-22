@@ -39,9 +39,92 @@
             border: 4px solid #667eea;
             box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
         }
+        .modern-team-hero {
+            padding-top: 120px !important;
+            z-index: 10 !important;
+            position: relative;
+        }
+        .modern-team-hero-modernized {
+            background: linear-gradient(135deg, #667eea 0%, #4ecdc4 100%);
+            padding: 80px 0 40px 0;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 8px 32px 0 rgba(31,38,135,0.18);
+            border-radius: 32px;
+            margin-bottom: 40px;
+        }
+        .modern-hero-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 32px;
+            gap: 48px;
+        }
+        .modern-hero-left {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .modern-hero-title {
+            font-size: 3rem;
+            font-weight: 800;
+            color: #fff;
+            margin-bottom: 18px;
+            line-height: 1.1;
+        }
+        .gradient-text {
+            background: linear-gradient(90deg, #ff6b6b, #4ecdc4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+        }
+        .modern-hero-description {
+            font-size: 1.25rem;
+            color: #fff;
+            background: rgba(255,255,255,0.12);
+            border-radius: 16px;
+            padding: 18px 24px;
+            box-shadow: 0 4px 24px rgba(102,126,234,0.08);
+            margin-bottom: 0;
+            max-width: 480px;
+            font-weight: 500;
+            backdrop-filter: blur(6px);
+        }
+        .modern-hero-right {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        @media (max-width: 900px) {
+            .modern-hero-container {
+                flex-direction: column;
+                gap: 32px;
+                padding: 0 16px;
+            }
+            .modern-hero-left, .modern-hero-right {
+                width: 100%;
+                text-align: center;
+                align-items: center;
+                justify-content: center;
+            }
+            .modern-hero-title {
+                font-size: 2.2rem;
+            }
+            .modern-hero-description {
+                font-size: 1.1rem;
+                padding: 14px 12px;
+            }
+        }
     </style>
 </head>
 <body>
+    <div class="modern-bg-animated"></div>
+    <div class="modern-bg-vignette"></div>
     <!-- Loading Screen -->
     <div id="loading-screen" class="loading-screen">
         <div class="loading-content">
@@ -82,69 +165,105 @@
             </div>
         </div>
     </nav>
-    <section class="page-hero">
-        <div class="hero-content">
-            <div class="hero-badge"><span class="badge-icon">👨‍💻</span><span>Our Team</span></div>
-            <h1 class="hero-title">Meet Our <span class="gradient-text">AI & Data Science Team</span></h1>
-            <p class="hero-description">The expert data scientists and AI engineers behind our innovative solutions.</p>
+    <!-- Modern Hero Section -->
+    <section class="modern-hero-full">
+        <div class="modern-hero-flex">
+            <div class="modern-hero-text">
+                <h1 class="modern-hero-title">Meet Our <span class="gradient-text">Core Team</span></h1>
+                <p class="modern-hero-description">A passionate group of AI engineers, data scientists, and innovators dedicated to building the future of intelligent technology.</p>
+            </div>
+            <div class="modern-hero-illustration">
+                <!-- Abstract SVG Illustration -->
+                <svg width="320" height="220" viewBox="0 0 320 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <ellipse cx="160" cy="110" rx="140" ry="80" fill="#4f8cff" opacity="0.18"/>
+                    <circle cx="90" cy="90" r="50" fill="#fff" opacity="0.10"/>
+                    <circle cx="230" cy="130" r="40" fill="#fff" opacity="0.13"/>
+                    <rect x="120" y="120" width="80" height="40" rx="18" fill="#23395d" opacity="0.18"/>
+                </svg>
+            </div>
         </div>
     </section>
-    <section class="team">
-        <div class="container">
-            <div class="section-header">
-                <h2>Our AI & Data Science Team</h2>
-                <p>Meet the expert data scientists and AI engineers behind our innovative solutions</p>
-            </div>
-            <div class="team-grid">
-                <div class="team-member">
-                    <div class="member-avatar">
-                        <img src="app/images/team/ahmed-khan.jpg" alt="Dr. Ahmed Khan - Chief AI Officer">
-                    </div>
-                    <h3>Dr. Ahmed Khan</h3>
-                    <p class="member-role">Chief AI Officer</p>
-                    <p class="member-bio">PhD in Machine Learning with 10+ years experience in deep learning, computer vision, and AI strategy.</p>
-                    <div class="member-social">
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
-                        <a href="#"><i class="fab fa-github"></i></a>
-                    </div>
+    <!-- Modern Team Grid -->
+    <section class="modern-team-section">
+        <div class="modern-team-grid">
+            <div class="team-member modern-team-card fade-in-up" style="animation-delay:0s;">
+                <div class="member-avatar"><img src="app/images/team/faizan.jpg" alt="Faizan Arshad"></div>
+                <h3 class="member-name">Faizan Arshad</h3>
+                <p class="member-role">CEO</p>
+                <div class="member-bio">
+                    <p>Leading the company's vision and strategy for AI-driven innovation and growth.</p>
                 </div>
-                <div class="team-member">
-                    <div class="member-avatar">
-                        <img src="app/images/team/sarah-johnson.jpg" alt="Sarah Johnson - Lead Data Scientist">
-                    </div>
-                    <h3>Sarah Johnson</h3>
-                    <p class="member-role">Lead Data Scientist</p>
-                    <p class="member-bio">Expert in predictive analytics, statistical modeling, and building scalable ML pipelines.</p>
-                    <div class="member-social">
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
-                        <a href="#"><i class="fab fa-github"></i></a>
-                    </div>
-                </div>
-                <div class="team-member">
-                    <div class="member-avatar">
-                        <img src="app/images/team/michael-chen.jpg" alt="Michael Chen - ML Engineer">
-                    </div>
-                    <h3>Michael Chen</h3>
-                    <p class="member-role">ML Engineer</p>
-                    <p class="member-bio">Specialized in deploying machine learning models, MLOps, and production AI systems.</p>
-                    <div class="member-social">
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
-                        <a href="#"><i class="fab fa-github"></i></a>
-                    </div>
-                </div>
-                <div class="team-member">
-                    <div class="member-avatar">
-                        <img src="app/images/team/emily-rodriguez.jpg" alt="Emily Rodriguez - Data Visualization Expert">
-                    </div>
-                    <h3>Emily Rodriguez</h3>
-                    <p class="member-role">Data Visualization Expert</p>
-                    <p class="member-bio">Creating compelling data stories through interactive dashboards and visual analytics.</p>
-                    <div class="member-social">
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
-                        <a href="#"><i class="fab fa-dribbble"></i></a>
-                    </div>
+                <div class="member-socials">
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
                 </div>
             </div>
+            <div class="team-member modern-team-card fade-in-up" style="animation-delay:0.1s;">
+                <div class="member-avatar"><img src="app/images/team/zeeshan.jpeg" alt="Zeeshan Arshad"></div>
+                <h3 class="member-name">Zeeshan Arshad</h3>
+                <p class="member-role">CTO</p>
+                <div class="member-bio">
+                  <p>Visionary CTO with a passion for driving technological innovation and building high-performance teams. Expert in architecting scalable AI and data solutions, leading digital transformation, and aligning technology with business strategy for sustainable growth.</p>
+                </div>
+                <div class="member-socials">
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+            <div class="team-member modern-team-card fade-in-up" style="animation-delay:0.2s;">
+                <div class="member-avatar avatar-usman"><img src="app/images/team/usman.jpeg" alt="Muhammad Usman"></div>
+                <h3 class="member-name">Muhammad Usman</h3>
+                <p class="member-role">Senior .NET Developer</p>
+                <div class="member-bio">
+                  <p>Experienced Software Engineer with expertise in C#, Microservices Architecture, and SQL.</p>
+                  <p>Proficient in .NET Core, Android, C++, JavaScript, Angular.js, and REST/SOAP APIs for scalable website solutions.</p>
+                </div>
+                <div class="member-socials">
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+            <div class="team-member modern-team-card fade-in-up" style="animation-delay:0.3s;">
+                <div class="member-avatar avatar-farhan"><img src="app/images/team/farhan.jpeg" alt="Mohammad Farhan"></div>
+                <h3 class="member-name">Mohammad Farhan</h3>
+                <p class="member-role">Senior Data Scientist</p>
+                <div class="member-bio">
+                  <p>Expert in data visualization, analytics, and business intelligence. Loves making data beautiful and actionable.</p>
+                </div>
+                <div class="member-socials">
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+            <div class="team-member modern-team-card fade-in-up" style="animation-delay:0.4s;">
+                <div class="member-avatar avatar-iqra"><img src="app/images/team/iqra.jpeg" alt="Iqra Nazir"></div>
+                <h3 class="member-name">Iqra Nazir</h3>
+                <p class="member-role">Simulation and Automation Engineer</p>
+                <div class="member-bio">
+                  <p>Specializing in AI-driven solutions for process optimization and intelligent systems.</p>
+                  <p>Experienced in machine learning, robotics, and automation to enhance efficiency and innovation.</p>
+                </div>
+                <div class="member-socials">
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+            <div class="team-member modern-team-card fade-in-up" style="animation-delay:0.5s;">
+                <div class="member-avatar"><img src="app/images/team/hamza.jpeg" alt="Hamza Nazir"></div>
+                <h3 class="member-name">Hamza Nazir</h3>
+                <p class="member-role">E-commerce & Digital Marketing Specialist</p>
+                <div class="member-bio">
+                  <p>Helping brands sell smarter & scale faster! From Shopify stores to Amazon, eBay, Etsy & Walmart plus social media ads that actually work.</p>
+                </div>
+                <div class="member-socials">
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="modern-team-cta fade-in-up" style="margin-top: 3rem; text-align: center; animation-delay:0.6s;">
+            <h3 style="color: #fff; font-weight: 600;">Want to connect with our experts?</h3>
+            <a href="#" class="btn btn-primary" style="font-size: 1.1rem; margin-top: 1rem;"><i class="fab fa-linkedin"></i> Connect on LinkedIn</a>
         </div>
     </section>
     <footer class="footer">
@@ -195,3 +314,4 @@
     <script src="script.js"></script>
 </body>
 </html>
+
