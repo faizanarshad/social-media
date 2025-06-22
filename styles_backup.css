@@ -3213,10 +3213,3 @@ body {
     zoom: 1 !important;
     transform: none !important;
 }
-
-/* Prevent zoom issues on buttons and interactive elements */
-.btn, .btn:hover, .btn:focus, .btn:active {
-    zoom: 1 !important;
-    transform: none !important;
-    scale: none !important;
-}

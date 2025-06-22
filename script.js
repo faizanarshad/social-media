@@ -1,38 +1,3 @@
-// COMPREHENSIVE ZOOM PREVENTION
-document.addEventListener('DOMContentLoaded', function() {
-    // Prevent any zoom or scaling issues
-    document.documentElement.style.zoom = '1';
-    document.body.style.zoom = '1';
-    
-    // Override any transform styles that might cause scaling
-    const preventScaling = () => {
-        const elements = document.querySelectorAll('*');
-        elements.forEach(el => {
-            if (el.style.transform && el.style.transform.includes('scale')) {
-                el.style.transform = el.style.transform.replace(/scale\([^)]*\)/g, '');
-            }
-        });
-    };
-    
-    // Run immediately and on any DOM changes
-    preventScaling();
-    
-    // Create a mutation observer to prevent scaling
-    const observer = new MutationObserver(preventScaling);
-    observer.observe(document.body, {
-        childList: true,
-        subtree: true,
-        attributes: true,
-        attributeFilter: ['style']
-    });
-    
-    // Prevent zoom on window resize
-    window.addEventListener('resize', () => {
-        document.documentElement.style.zoom = '1';
-        document.body.style.zoom = '1';
-    });
-});
-
 // Modern Website Enhancement System
 class WebsiteEnhancer {
     constructor() {
