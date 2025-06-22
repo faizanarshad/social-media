@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Qbrix Solution - AI Solutions for NLP, Computer Vision, Predictive Analytics, Automation, and more.">
+    <meta name="keywords" content="AI Solutions, NLP, Computer Vision, Predictive Analytics, Automation, Deep Learning, Data Science">
+    <meta name="author" content="Qbrix Solution">
+    <meta property="og:title" content="AI Solutions - Qbrix Solution">
+    <meta property="og:description" content="Explore our advanced AI solutions for business transformation.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://qbrixsolution.com/ai-solutions">
+    <title>AI Solutions - Qbrix Solution</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🤖</text></svg>">
+    <style>
+        /* Unique AI Solutions Page Layout */
+        .ai-solutions-hero {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .ai-solutions-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="circuit" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M 0 10 L 20 10 M 10 0 L 10 20" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23circuit)"/></svg>');
+            opacity: 0.4;
+        }
+
+        .hero-content {
+            text-align: center;
+            color: white;
+            z-index: 2;
+            position: relative;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(15px);
+            padding: 15px 30px;
+            border-radius: 50px;
+            margin-bottom: 40px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+
+        .hero-title {
+            font-size: 4.5rem;
+            font-weight: 800;
+            margin-bottom: 30px;
+            background: linear-gradient(45deg, #fff, #e3f2fd);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-description {
+            font-size: 1.4rem;
+            max-width: 900px;
+            margin: 0 auto 60px;
+            line-height: 1.7;
+            opacity: 0.95;
+        }
+
+        .hero-image {
+            position: absolute;
+            right: 5%;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 400px;
+            height: 400px;
+            background: url('app/images/ai-solutions/hero-ai.jpg') center/cover no-repeat;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            animation: pulse 4s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: translateY(-50%) scale(1); opacity: 0.8; }
+            50% { transform: translateY(-50%) scale(1.1); opacity: 1; }
+        }
+
+        .ai-solutions-showcase {
+            padding: 120px 0;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        }
+
+        .solutions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .solution-card {
+            background: white;
+            border-radius: 25px;
+            overflow: hidden;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.1);
+            transition: all 0.5s ease;
+            position: relative;
+        }
+
+        .solution-card:hover {
+            transform: translateY(-15px) scale(1.02);
+            box-shadow: 0 35px 70px rgba(0, 0, 0, 0.15);
+        }
+
+        .solution-image {
+            height: 250px;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+        }
+
+        .solution-image::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-size: cover;
+            background-position: center;
+            opacity: 0.8;
+        }
+
+        .solution-image::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.7), rgba(118, 75, 162, 0.7));
+            z-index: 1;
+        }
+
+        .solution-image.nlp::before {
+            background-image: url('app/images/ai-solutions/nlp.jpg');
+        }
+
+        .solution-image.vision::before {
+            background-image: url('app/images/ai-solutions/computer-vision.jpg');
+        }
+
+        .solution-image.analytics::before {
+            background-image: url('app/images/ai-solutions/analytics.jpg');
+        }
+
+        .solution-image.automation::before {
+            background-image: url('app/images/ai-solutions/automation.jpg');
+        }
+
+        .solution-image.deep-learning::before {
+            background-image: url('app/images/ai-solutions/deep-learning.jpg');
+        }
+
+        .solution-image.chatbot::before {
+            background-image: url('app/images/ai-solutions/chatbot.jpg');
+        }
+
+        .solution-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.9), rgba(118, 75, 162, 0.9));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: 2;
+        }
+
+        .solution-card:hover .solution-overlay {
+            opacity: 1;
+        }
+
+        .solution-overlay-content {
+            text-align: center;
+            color: white;
+        }
+
+        .solution-overlay-icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+
+        .solution-content {
+            padding: 40px;
+        }
+
+        .solution-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+
+        .solution-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            margin-right: 20px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+        }
+
+        .solution-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .solution-subtitle {
+            color: #666;
+            font-size: 1rem;
+        }
+
+        .solution-description {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #555;
+            margin-bottom: 25px;
+        }
+
+        .solution-features {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 25px;
+        }
+
+        .solution-features li {
+            display: flex;
+            align-items: center;
+            padding: 8px 0;
+            color: #555;
+        }
+
+        .solution-features li::before {
+            content: '✓';
+            color: #667eea;
+            font-weight: bold;
+            margin-right: 10px;
+            font-size: 1.1rem;
+        }
+
+        .solution-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .tech-tag {
+            padding: 6px 12px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        .ai-stats-section {
+            padding: 100px 0;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .stat-card {
+            text-align: center;
+            padding: 40px 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 10px;
+            background: linear-gradient(45deg, #fff, #e3f2fd);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .stat-label {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .cta-section {
+            padding: 100px 0;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            text-align: center;
+        }
+
+        .cta-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .cta-title {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 30px;
+        }
+
+        .cta-description {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 50px;
+            line-height: 1.6;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-cta {
+            padding: 15px 40px;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-primary-cta {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+        }
+
+        .btn-secondary-cta {
+            background: white;
+            color: #667eea;
+            border: 2px solid #667eea;
+        }
+
+        .btn-cta:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        @media (max-width: 768px) {
+            .hero-title { font-size: 3rem; }
+            .hero-image { display: none; }
+            .solutions-grid { grid-template-columns: 1fr; }
+            .cta-title { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loading-content">
+            <div class="loading-logo">
+                <div class="logo-animation">
+                    <i class="fas fa-brain"></i>
+                </div>
+                <h2>Qbrix Solution</h2>
+            </div>
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+            </div>
+            <p class="loading-text">Loading AI Solutions...</p>
+        </div>
+    </div>
+
+    <!-- Animated Background Particles -->
+    <div id="particles-js"></div>
+    
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <div class="logo-icon">
+                    <i class="fas fa-brain"></i>
+                </div>
+                <h2>Qbrix Solution</h2>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="services.html" class="nav-link">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a href="ai-solutions.html" class="nav-link active" aria-current="page">AI Solutions</a>
+                </li>
+                <li class="nav-item">
+                    <a href="portfolio.html" class="nav-link">Portfolio</a>
+                </li>
+                <li class="nav-item">
+                    <a href="team.html" class="nav-link">Team</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="nav-actions">
+                <button class="theme-toggle" aria-label="Toggle dark mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <div class="hamburger" aria-label="Toggle navigation menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Enhanced Hero Section with Image -->
+    <section class="ai-solutions-hero">
+        <div class="hero-image"></div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="badge-icon">🚀</span>
+                    <span>Next-Generation AI</span>
+                </div>
+                <h1 class="hero-title">
+                    Advanced AI Solutions for 
+                    <span class="gradient-text">Tomorrow's Business</span>
+                </h1>
+                <p class="hero-description">
+                    Discover cutting-edge artificial intelligence solutions that transform businesses 
+                    through intelligent automation, predictive analytics, computer vision, and natural 
+                    language processing. Experience the future of technology today.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#solutions" class="btn btn-primary">
+                        <span>Explore Solutions</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="contact.html" class="btn btn-secondary">
+                        <span>Get Started</span>
+                        <i class="fas fa-play"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Solutions Showcase with Images -->
+    <section id="solutions" class="ai-solutions-showcase">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Advanced AI Solutions</h2>
+                <p>State-of-the-art artificial intelligence solutions that drive business transformation</p>
+            </div>
+            
+            <div class="solutions-grid">
+                <div class="solution-card">
+                    <div class="solution-image nlp">
+                        <div class="solution-overlay">
+                            <div class="solution-overlay-content">
+                                <div class="solution-overlay-icon">💬</div>
+                                <h3>Natural Language Processing</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="solution-content">
+                        <div class="solution-header">
+                            <div class="solution-icon">
+                                <i class="fas fa-language"></i>
+                            </div>
+                            <div>
+                                <h3 class="solution-title">Natural Language Processing</h3>
+                                <p class="solution-subtitle">Intelligent text and speech understanding</p>
+                            </div>
+                        </div>
+                        <p class="solution-description">
+                            Advanced NLP solutions that understand, interpret, and generate human language. 
+                            From chatbots to document analysis, our NLP systems provide intelligent text 
+                            processing and natural conversation capabilities.
+                        </p>
+                        <ul class="solution-features">
+                            <li>AI Chatbots & Virtual Assistants</li>
+                            <li>Text Summarization & Analysis</li>
+                            <li>Sentiment Analysis & Emotion Detection</li>
+                            <li>Document Classification & Processing</li>
+                        </ul>
+                        <div class="solution-tech">
+                            <span class="tech-tag">BERT</span>
+                            <span class="tech-tag">GPT</span>
+                            <span class="tech-tag">SpaCy</span>
+                            <span class="tech-tag">NLTK</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="solution-card">
+                    <div class="solution-image vision">
+                        <div class="solution-overlay">
+                            <div class="solution-overlay-content">
+                                <div class="solution-overlay-icon">👁️</div>
+                                <h3>Computer Vision</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="solution-content">
+                        <div class="solution-header">
+                            <div class="solution-icon">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                            <div>
+                                <h3 class="solution-title">Computer Vision</h3>
+                                <p class="solution-subtitle">Advanced image and video analysis</p>
+                            </div>
+                        </div>
+                        <p class="solution-description">
+                            Cutting-edge computer vision solutions that analyze images and videos to extract 
+                            meaningful insights. From object detection to facial recognition, our vision systems 
+                            provide accurate and real-time visual intelligence.
+                        </p>
+                        <ul class="solution-features">
+                            <li>Object Detection & Recognition</li>
+                            <li>Image Classification & Segmentation</li>
+                            <li>Video Analytics & Processing</li>
+                            <li>Facial Recognition & Biometrics</li>
+                        </ul>
+                        <div class="solution-tech">
+                            <span class="tech-tag">OpenCV</span>
+                            <span class="tech-tag">YOLO</span>
+                            <span class="tech-tag">TensorFlow</span>
+                            <span class="tech-tag">PyTorch</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="solution-card">
+                    <div class="solution-image analytics">
+                        <div class="solution-overlay">
+                            <div class="solution-overlay-content">
+                                <div class="solution-overlay-icon">📊</div>
+                                <h3>Predictive Analytics</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="solution-content">
+                        <div class="solution-header">
+                            <div class="solution-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <div>
+                                <h3 class="solution-title">Predictive Analytics</h3>
+                                <p class="solution-subtitle">Data-driven forecasting and insights</p>
+                            </div>
+                        </div>
+                        <p class="solution-description">
+                            Advanced predictive analytics solutions that forecast trends, identify patterns, 
+                            and provide actionable insights. Our predictive models help businesses make 
+                            data-driven decisions and optimize operations.
+                        </p>
+                        <ul class="solution-features">
+                            <li>Sales Forecasting & Revenue Prediction</li>
+                            <li>Anomaly Detection & Pattern Recognition</li>
+                            <li>Business Intelligence & Analytics</li>
+                            <li>Customer Behavior Analysis</li>
+                        </ul>
+                        <div class="solution-tech">
+                            <span class="tech-tag">Scikit-learn</span>
+                            <span class="tech-tag">XGBoost</span>
+                            <span class="tech-tag">Prophet</span>
+                            <span class="tech-tag">ARIMA</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="solution-card">
+                    <div class="solution-image automation">
+                        <div class="solution-overlay">
+                            <div class="solution-overlay-content">
+                                <div class="solution-overlay-icon">🤖</div>
+                                <h3>Automation & Robotics</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="solution-content">
+                        <div class="solution-header">
+                            <div class="solution-icon">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <div>
+                                <h3 class="solution-title">Automation & Robotics</h3>
+                                <p class="solution-subtitle">Intelligent process automation</p>
+                            </div>
+                        </div>
+                        <p class="solution-description">
+                            Intelligent automation solutions that streamline business processes and increase 
+                            efficiency. From robotic process automation to intelligent scheduling, our systems 
+                            handle complex tasks with precision and reliability.
+                        </p>
+                        <ul class="solution-features">
+                            <li>RPA Bots & Process Automation</li>
+                            <li>Workflow Automation & Optimization</li>
+                            <li>Intelligent Scheduling & Resource Allocation</li>
+                            <li>Process Optimization & Efficiency</li>
+                        </ul>
+                        <div class="solution-tech">
+                            <span class="tech-tag">UiPath</span>
+                            <span class="tech-tag">Automation Anywhere</span>
+                            <span class="tech-tag">Blue Prism</span>
+                            <span class="tech-tag">Python</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="solution-card">
+                    <div class="solution-image deep-learning">
+                        <div class="solution-overlay">
+                            <div class="solution-overlay-content">
+                                <div class="solution-overlay-icon">🧠</div>
+                                <h3>Deep Learning</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="solution-content">
+                        <div class="solution-header">
+                            <div class="solution-icon">
+                                <i class="fas fa-network-wired"></i>
+                            </div>
+                            <div>
+                                <h3 class="solution-title">Deep Learning</h3>
+                                <p class="solution-subtitle">Neural network solutions</p>
+                            </div>
+                        </div>
+                        <p class="solution-description">
+                            Advanced deep learning solutions using neural networks to solve complex problems. 
+                            Our deep learning models excel at pattern recognition, image processing, and 
+                            natural language understanding tasks.
+                        </p>
+                        <ul class="solution-features">
+                            <li>Neural Networks & Complex Architectures</li>
+                            <li>Pattern Recognition & Detection</li>
+                            <li>Speech Recognition & Processing</li>
+                            <li>Language Models & Text Generation</li>
+                        </ul>
+                        <div class="solution-tech">
+                            <span class="tech-tag">TensorFlow</span>
+                            <span class="tech-tag">PyTorch</span>
+                            <span class="tech-tag">Keras</span>
+                            <span class="tech-tag">CUDA</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="solution-card">
+                    <div class="solution-image chatbot">
+                        <div class="solution-overlay">
+                            <div class="solution-overlay-content">
+                                <div class="solution-overlay-icon">💭</div>
+                                <h3>AI Chatbots</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="solution-content">
+                        <div class="solution-header">
+                            <div class="solution-icon">
+                                <i class="fas fa-comment-dots"></i>
+                            </div>
+                            <div>
+                                <h3 class="solution-title">AI Chatbots</h3>
+                                <p class="solution-subtitle">Conversational AI assistants</p>
+                            </div>
+                        </div>
+                        <p class="solution-description">
+                            Intelligent chatbot solutions that provide 24/7 customer support and engagement. 
+                            Our AI chatbots understand context, learn from interactions, and provide 
+                            personalized responses to enhance customer experience.
+                        </p>
+                        <ul class="solution-features">
+                            <li>24/7 Customer Support</li>
+                            <li>Context-Aware Conversations</li>
+                            <li>Multi-Language Support</li>
+                            <li>Integration with Business Systems</li>
+                        </ul>
+                        <div class="solution-tech">
+                            <span class="tech-tag">Dialogflow</span>
+                            <span class="tech-tag">Rasa</span>
+                            <span class="tech-tag">OpenAI</span>
+                            <span class="tech-tag">Botpress</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Statistics Section -->
+    <section class="ai-stats-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>AI Solutions Impact</h2>
+                <p>Real results from our AI implementations</p>
+            </div>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">95%</div>
+                    <div class="stat-label">Accuracy Rate</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">60%</div>
+                    <div class="stat-label">Cost Reduction</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">24/7</div>
+                    <div class="stat-label">Availability</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">10x</div>
+                    <div class="stat-label">Faster Processing</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">Ready to Transform Your Business with AI?</h2>
+                <p class="cta-description">
+                    Join the AI revolution and unlock the full potential of your business. Our expert team 
+                    is ready to help you implement cutting-edge AI solutions that drive growth, efficiency, 
+                    and innovation.
+                </p>
+                <div class="cta-buttons">
+                    <a href="contact.html" class="btn-cta btn-primary-cta">
+                        <i class="fas fa-rocket"></i>
+                        Start AI Project
+                    </a>
+                    <a href="portfolio.html" class="btn-cta btn-secondary-cta">
+                        <i class="fas fa-eye"></i>
+                        View Case Studies
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Qbrix Solution</h3>
+                    <p>Leading AI and data science software house specializing in machine learning, deep learning, data analytics, and intelligent e-commerce solutions.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>AI Services</h4>
+                    <ul>
+                        <li><a href="services.html">Machine Learning</a></li>
+                        <li><a href="services.html">Deep Learning</a></li>
+                        <li><a href="services.html">Data Analytics</a></li>
+                        <li><a href="services.html">Computer Vision</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Solutions</h4>
+                    <ul>
+                        <li><a href="portfolio.html">AI E-commerce</a></li>
+                        <li><a href="portfolio.html">Predictive Analytics</a></li>
+                        <li><a href="portfolio.html">Data Visualization</a></li>
+                        <li><a href="portfolio.html">ML Models</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>AI Newsletter</h4>
+                    <p>Stay updated with the latest AI trends, ML insights, and data science innovations.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Enter your email">
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Qbrix Solution - AI & Data Science Specialists. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

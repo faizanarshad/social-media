@@ -1,0 +1,1166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Qbrix Solution - AI and Data Science Services including Machine Learning, Deep Learning, Data Analytics, and E-commerce solutions">
+    <meta name="keywords" content="AI Services, Machine Learning, Deep Learning, Data Analytics, Data Visualization, E-commerce, Software Development">
+    <meta name="author" content="Qbrix Solution">
+    <meta property="og:title" content="AI Services - Qbrix Solution">
+    <meta property="og:description" content="Comprehensive AI and data science services for modern businesses">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://qbrixsolution.com/services">
+    <title>AI Services - Qbrix Solution</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🤖</text></svg>">
+    <style>
+        /* Enhanced Services Page Styles */
+        .services-hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .services-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+            opacity: 0.3;
+        }
+
+        .hero-content {
+            text-align: center;
+            color: white;
+            z-index: 2;
+            position: relative;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            padding: 12px 24px;
+            border-radius: 50px;
+            margin-bottom: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .hero-title {
+            font-size: 4rem;
+            font-weight: 800;
+            margin-bottom: 30px;
+            background: linear-gradient(45deg, #fff, #f0f8ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-description {
+            font-size: 1.3rem;
+            max-width: 800px;
+            margin: 0 auto 50px;
+            line-height: 1.6;
+            opacity: 0.9;
+        }
+
+        .floating-ai-elements {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            pointer-events: none;
+        }
+
+        .ai-element {
+            position: absolute;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .ai-element:nth-child(1) {
+            top: 20%;
+            left: 10%;
+            animation-delay: 0s;
+        }
+
+        .ai-element:nth-child(2) {
+            top: 60%;
+            right: 15%;
+            animation-delay: 2s;
+        }
+
+        .ai-element:nth-child(3) {
+            bottom: 30%;
+            left: 20%;
+            animation-delay: 4s;
+        }
+
+        .ai-element:nth-child(4) {
+            top: 40%;
+            right: 30%;
+            animation-delay: 1s;
+        }
+
+        .ai-element:nth-child(5) {
+            bottom: 20%;
+            right: 10%;
+            animation-delay: 3s;
+        }
+
+        .ai-element:nth-child(6) {
+            top: 80%;
+            left: 50%;
+            animation-delay: 5s;
+        }
+
+        .ai-icon {
+            width: 60px;
+            height: 60px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(5deg); }
+        }
+
+        .services-showcase {
+            padding: 100px 0;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        }
+
+        .service-card-modern {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 40px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card-modern::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+        }
+
+        .service-card-modern:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
+        }
+
+        .service-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .service-icon-large {
+            width: 80px;
+            height: 80px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            margin-right: 25px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+        }
+
+        .service-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .service-subtitle {
+            color: #666;
+            font-size: 1.1rem;
+        }
+
+        .service-description {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: #555;
+            margin-bottom: 30px;
+        }
+
+        .service-features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .feature-item:hover {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            transform: translateX(5px);
+        }
+
+        .feature-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            color: white;
+        }
+
+        .feature-item:hover .feature-icon {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .tech-badge {
+            padding: 8px 16px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .ai-visualization {
+            height: 200px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            border-radius: 15px;
+            margin-bottom: 30px;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .ai-visualization::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.8), rgba(118, 75, 162, 0.8));
+            z-index: 1;
+        }
+
+        .ai-visual-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            color: white;
+        }
+
+        .process-timeline {
+            padding: 100px 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateX(-50%);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 60px;
+            width: 45%;
+        }
+
+        .timeline-item:nth-child(odd) {
+            left: 0;
+            text-align: right;
+        }
+
+        .timeline-item:nth-child(even) {
+            left: 55%;
+            text-align: left;
+        }
+
+        .timeline-content {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 30px;
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .timeline-number {
+            position: absolute;
+            top: 20px;
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #fff, #f0f8ff);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #667eea;
+        }
+
+        .timeline-item:nth-child(odd) .timeline-number {
+            right: -80px;
+        }
+
+        .timeline-item:nth-child(even) .timeline-number {
+            left: -80px;
+        }
+
+        .timeline-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .timeline-description {
+            line-height: 1.6;
+            opacity: 0.9;
+        }
+
+        .cta-section {
+            padding: 100px 0;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            text-align: center;
+        }
+
+        .cta-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .cta-title {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 30px;
+        }
+
+        .cta-description {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 50px;
+            line-height: 1.6;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-cta {
+            padding: 15px 40px;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-primary-cta {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+        }
+
+        .btn-secondary-cta {
+            background: white;
+            color: #667eea;
+            border: 2px solid #667eea;
+        }
+
+        .btn-cta:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            
+            .timeline::before {
+                left: 20px;
+            }
+            
+            .timeline-item {
+                width: 100%;
+                left: 0 !important;
+                text-align: left !important;
+                padding-left: 60px;
+            }
+            
+            .timeline-number {
+                left: -40px !important;
+                right: auto !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loading-content">
+            <div class="loading-logo">
+                <div class="logo-animation">
+                    <i class="fas fa-brain"></i>
+                </div>
+                <h2>Qbrix Solution</h2>
+            </div>
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+            </div>
+            <p class="loading-text">Loading AI Services...</p>
+        </div>
+    </div>
+
+    <!-- Animated Background Particles -->
+    <div id="particles-js"></div>
+    
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <div class="logo-icon">
+                    <i class="fas fa-brain"></i>
+                </div>
+                <h2>Qbrix Solution</h2>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="services.html" class="nav-link active" aria-current="page">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a href="ai-solutions.html" class="nav-link">AI Solutions</a>
+                </li>
+                <li class="nav-item">
+                    <a href="portfolio.html" class="nav-link">Portfolio</a>
+                </li>
+                <li class="nav-item">
+                    <a href="team.html" class="nav-link">Team</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="nav-actions">
+                <button class="theme-toggle" aria-label="Toggle dark mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <div class="hamburger" aria-label="Toggle navigation menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Enhanced Hero Section -->
+    <section class="services-hero">
+        <div class="floating-ai-elements">
+            <div class="ai-element">
+                <div class="ai-icon">
+                    <i class="fas fa-brain"></i>
+                </div>
+            </div>
+            <div class="ai-element">
+                <div class="ai-icon">
+                    <i class="fas fa-robot"></i>
+                </div>
+            </div>
+            <div class="ai-element">
+                <div class="ai-icon">
+                    <i class="fas fa-microchip"></i>
+                </div>
+            </div>
+            <div class="ai-element">
+                <div class="ai-icon">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+            </div>
+            <div class="ai-element">
+                <div class="ai-icon">
+                    <i class="fas fa-network-wired"></i>
+                </div>
+            </div>
+            <div class="ai-element">
+                <div class="ai-icon">
+                    <i class="fas fa-cogs"></i>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="badge-icon">🚀</span>
+                    <span>AI-Powered Services</span>
+                </div>
+                <h1 class="hero-title">
+                    Transform Your Business with 
+                    <span class="gradient-text">AI Excellence</span>
+                </h1>
+                <p class="hero-description">
+                    From cutting-edge machine learning algorithms to intelligent automation systems, 
+                    we deliver comprehensive AI solutions that drive innovation, efficiency, and growth 
+                    for forward-thinking businesses.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#services" class="btn btn-primary">
+                        <span>Explore Services</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="#process" class="btn btn-secondary">
+                        <span>Our Process</span>
+                        <i class="fas fa-play"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enhanced Services Showcase -->
+    <section id="services" class="services-showcase">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Comprehensive AI Services</h2>
+                <p>State-of-the-art artificial intelligence solutions tailored to your business needs</p>
+            </div>
+            
+            <div class="service-card-modern">
+                <div class="service-header">
+                    <div class="service-icon-large">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <div>
+                        <h3 class="service-title">Artificial Intelligence</h3>
+                        <p class="service-subtitle">Intelligent automation and cognitive computing</p>
+                    </div>
+                </div>
+                
+                <div class="ai-visualization" style="background-image: url('app/images/services/artificial-intelligence.jpg');">
+                    <div class="ai-visual-content">
+                        <i class="fas fa-brain" style="font-size: 3rem; color: white;"></i>
+                    </div>
+                </div>
+                
+                <p class="service-description">
+                    Custom AI solutions that revolutionize business processes through natural language processing, 
+                    computer vision, and intelligent automation systems. Our AI solutions learn, adapt, and evolve 
+                    with your business needs.
+                </p>
+                
+                <div class="service-features-grid">
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-comments"></i>
+                        </div>
+                        <div>
+                            <h4>Natural Language Processing</h4>
+                            <p>Advanced text and speech understanding</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <div>
+                            <h4>Computer Vision</h4>
+                            <p>Image and video analysis capabilities</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <div>
+                            <h4>Intelligent Automation</h4>
+                            <p>Smart process automation systems</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-comment-dots"></i>
+                        </div>
+                        <div>
+                            <h4>AI Chatbots</h4>
+                            <p>Conversational AI assistants</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tech-stack">
+                    <span class="tech-badge">TensorFlow</span>
+                    <span class="tech-badge">PyTorch</span>
+                    <span class="tech-badge">OpenAI</span>
+                    <span class="tech-badge">Hugging Face</span>
+                </div>
+            </div>
+
+            <div class="service-card-modern">
+                <div class="service-header">
+                    <div class="service-icon-large">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <div>
+                        <h3 class="service-title">Machine Learning</h3>
+                        <p class="service-subtitle">Predictive analytics and pattern recognition</p>
+                    </div>
+                </div>
+                
+                <div class="ai-visualization" style="background-image: url('app/images/services/machine-learning.jpg');">
+                    <div class="ai-visual-content">
+                        <i class="fas fa-chart-line" style="font-size: 3rem; color: white;"></i>
+                    </div>
+                </div>
+                
+                <p class="service-description">
+                    Advanced machine learning algorithms and predictive models that help businesses make 
+                    data-driven decisions, optimize operations, and uncover hidden patterns in complex datasets.
+                </p>
+                
+                <div class="service-features-grid">
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-crystal-ball"></i>
+                        </div>
+                        <div>
+                            <h4>Predictive Analytics</h4>
+                            <p>Future trend forecasting</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-thumbs-up"></i>
+                        </div>
+                        <div>
+                            <h4>Recommendation Systems</h4>
+                            <p>Personalized suggestions</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <div>
+                            <h4>Pattern Recognition</h4>
+                            <p>Data pattern identification</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <div>
+                            <h4>ML Model Development</h4>
+                            <p>Custom algorithm creation</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tech-stack">
+                    <span class="tech-badge">Scikit-learn</span>
+                    <span class="tech-badge">XGBoost</span>
+                    <span class="tech-badge">Pandas</span>
+                    <span class="tech-badge">NumPy</span>
+                </div>
+            </div>
+
+            <div class="service-card-modern">
+                <div class="service-header">
+                    <div class="service-icon-large">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <div>
+                        <h3 class="service-title">Deep Learning</h3>
+                        <p class="service-subtitle">Neural networks and advanced AI</p>
+                    </div>
+                </div>
+                
+                <div class="ai-visualization" style="background-image: url('app/images/services/deep-learning.jpg');">
+                    <div class="ai-visual-content">
+                        <i class="fas fa-network-wired" style="font-size: 3rem; color: white;"></i>
+                    </div>
+                </div>
+                
+                <p class="service-description">
+                    Neural network architectures and deep learning solutions for complex problem-solving, 
+                    image recognition, speech processing, and advanced AI applications that mimic human cognition.
+                </p>
+                
+                <div class="service-features-grid">
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-project-diagram"></i>
+                        </div>
+                        <div>
+                            <h4>Neural Networks</h4>
+                            <p>Complex AI architectures</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-image"></i>
+                        </div>
+                        <div>
+                            <h4>Image Recognition</h4>
+                            <p>Visual data processing</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-microphone"></i>
+                        </div>
+                        <div>
+                            <h4>Speech Processing</h4>
+                            <p>Audio analysis and synthesis</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-layer-group"></i>
+                        </div>
+                        <div>
+                            <h4>Deep Learning Models</h4>
+                            <p>Multi-layer AI systems</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tech-stack">
+                    <span class="tech-badge">TensorFlow</span>
+                    <span class="tech-badge">PyTorch</span>
+                    <span class="tech-badge">Keras</span>
+                    <span class="tech-badge">CUDA</span>
+                </div>
+            </div>
+
+            <div class="service-card-modern">
+                <div class="service-header">
+                    <div class="service-icon-large">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <div>
+                        <h3 class="service-title">Data Analytics</h3>
+                        <p class="service-subtitle">Insights from complex data</p>
+                    </div>
+                </div>
+                
+                <div class="ai-visualization" style="background-image: url('app/images/services/data-analytics.jpg');">
+                    <div class="ai-visual-content">
+                        <i class="fas fa-chart-bar" style="font-size: 3rem; color: white;"></i>
+                    </div>
+                </div>
+                
+                <p class="service-description">
+                    Comprehensive data analysis services that transform raw data into actionable insights 
+                    for strategic business decisions, performance optimization, and competitive advantage.
+                </p>
+                
+                <div class="service-features-grid">
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <div>
+                            <h4>Business Intelligence</h4>
+                            <p>Strategic data insights</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-calculator"></i>
+                        </div>
+                        <div>
+                            <h4>Statistical Analysis</h4>
+                            <p>Advanced data modeling</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                        <div>
+                            <h4>Data Mining</h4>
+                            <p>Pattern discovery</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-tachometer-alt"></i>
+                        </div>
+                        <div>
+                            <h4>Performance Analytics</h4>
+                            <p>KPI monitoring</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tech-stack">
+                    <span class="tech-badge">Python</span>
+                    <span class="tech-badge">R</span>
+                    <span class="tech-badge">SQL</span>
+                    <span class="tech-badge">Apache Spark</span>
+                </div>
+            </div>
+
+            <div class="service-card-modern">
+                <div class="service-header">
+                    <div class="service-icon-large">
+                        <i class="fas fa-chart-pie"></i>
+                    </div>
+                    <div>
+                        <h3 class="service-title">Data Visualization</h3>
+                        <p class="service-subtitle">Beautiful data stories</p>
+                    </div>
+                </div>
+                
+                <div class="ai-visualization" style="background-image: url('app/images/services/data-visualization.jpg');">
+                    <div class="ai-visual-content">
+                        <i class="fas fa-chart-pie" style="font-size: 3rem; color: white;"></i>
+                    </div>
+                </div>
+                
+                <p class="service-description">
+                    Interactive dashboards and compelling visual representations that make complex data 
+                    accessible and actionable for stakeholders, enabling better decision-making through 
+                    intuitive data storytelling.
+                </p>
+                
+                <div class="service-features-grid">
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-desktop"></i>
+                        </div>
+                        <div>
+                            <h4>Interactive Dashboards</h4>
+                            <p>Real-time data monitoring</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div>
+                            <h4>Real-time Monitoring</h4>
+                            <p>Live data updates</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-palette"></i>
+                        </div>
+                        <div>
+                            <h4>Custom Visualizations</h4>
+                            <p>Tailored data displays</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-book-open"></i>
+                        </div>
+                        <div>
+                            <h4>Data Storytelling</h4>
+                            <p>Narrative data presentation</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tech-stack">
+                    <span class="tech-badge">D3.js</span>
+                    <span class="tech-badge">Tableau</span>
+                    <span class="tech-badge">Power BI</span>
+                    <span class="tech-badge">Plotly</span>
+                </div>
+            </div>
+
+            <div class="service-card-modern">
+                <div class="service-header">
+                    <div class="service-icon-large">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <div>
+                        <h3 class="service-title">E-commerce Solutions</h3>
+                        <p class="service-subtitle">AI-powered online commerce</p>
+                    </div>
+                </div>
+                
+                <div class="ai-visualization" style="background-image: url('app/images/services/ecommerce.jpg');">
+                    <div class="ai-visual-content">
+                        <i class="fas fa-shopping-cart" style="font-size: 3rem; color: white;"></i>
+                    </div>
+                </div>
+                
+                <p class="service-description">
+                    AI-powered e-commerce platforms with intelligent product recommendations, automated 
+                    inventory management, and personalized shopping experiences that boost sales and 
+                    customer satisfaction.
+                </p>
+                
+                <div class="service-features-grid">
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-thumbs-up"></i>
+                        </div>
+                        <div>
+                            <h4>AI Product Recommendations</h4>
+                            <p>Smart product suggestions</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-boxes"></i>
+                        </div>
+                        <div>
+                            <h4>Inventory Management</h4>
+                            <p>Automated stock control</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-user-check"></i>
+                        </div>
+                        <div>
+                            <h4>Personalized Shopping</h4>
+                            <p>Custom user experiences</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-credit-card"></i>
+                        </div>
+                        <div>
+                            <h4>Payment Integration</h4>
+                            <p>Secure transaction processing</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tech-stack">
+                    <span class="tech-badge">React</span>
+                    <span class="tech-badge">Node.js</span>
+                    <span class="tech-badge">MongoDB</span>
+                    <span class="tech-badge">Stripe</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enhanced Process Timeline -->
+    <section id="process" class="process-timeline">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our AI Development Process</h2>
+                <p>A systematic approach to delivering cutting-edge AI solutions</p>
+            </div>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-number">1</div>
+                        <h3 class="timeline-title">Discovery & Analysis</h3>
+                        <p class="timeline-description">
+                            Understanding your business needs, data sources, and AI requirements through 
+                            comprehensive analysis and stakeholder interviews.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-number">2</div>
+                        <h3 class="timeline-title">Data Preparation</h3>
+                        <p class="timeline-description">
+                            Cleaning, preprocessing, and preparing your data for optimal AI model performance 
+                            with advanced data engineering techniques.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-number">3</div>
+                        <h3 class="timeline-title">Model Development</h3>
+                        <p class="timeline-description">
+                            Building and training custom AI models using state-of-the-art algorithms, 
+                            frameworks, and best practices in machine learning.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-number">4</div>
+                        <h3 class="timeline-title">Testing & Validation</h3>
+                        <p class="timeline-description">
+                            Rigorous testing and validation to ensure model accuracy, reliability, and 
+                            performance across various scenarios and edge cases.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-number">5</div>
+                        <h3 class="timeline-title">Deployment</h3>
+                        <p class="timeline-description">
+                            Seamless deployment of AI solutions with monitoring, maintenance, and 
+                            continuous improvement support for production environments.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-number">6</div>
+                        <h3 class="timeline-title">Optimization</h3>
+                        <p class="timeline-description">
+                            Continuous improvement and optimization based on real-world performance data, 
+                            user feedback, and evolving business requirements.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">Ready to Transform Your Business with AI?</h2>
+                <p class="cta-description">
+                    Join the AI revolution and unlock the full potential of your data. Our expert team 
+                    is ready to help you implement cutting-edge AI solutions that drive growth and innovation.
+                </p>
+                <div class="cta-buttons">
+                    <a href="contact.html" class="btn-cta btn-primary-cta">
+                        <i class="fas fa-rocket"></i>
+                        Start Your AI Project
+                    </a>
+                    <a href="portfolio.html" class="btn-cta btn-secondary-cta">
+                        <i class="fas fa-eye"></i>
+                        View Our Work
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Qbrix Solution</h3>
+                    <p>Leading AI and data science software house specializing in machine learning, deep learning, data analytics, and intelligent e-commerce solutions.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>AI Services</h4>
+                    <ul>
+                        <li><a href="#services">Machine Learning</a></li>
+                        <li><a href="#services">Deep Learning</a></li>
+                        <li><a href="#services">Data Analytics</a></li>
+                        <li><a href="#services">Computer Vision</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Solutions</h4>
+                    <ul>
+                        <li><a href="#portfolio">AI E-commerce</a></li>
+                        <li><a href="#portfolio">Predictive Analytics</a></li>
+                        <li><a href="#portfolio">Data Visualization</a></li>
+                        <li><a href="#portfolio">ML Models</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>AI Newsletter</h4>
+                    <p>Stay updated with the latest AI trends, ML insights, and data science innovations.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Enter your email">
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Qbrix Solution - AI & Data Science Specialists. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 

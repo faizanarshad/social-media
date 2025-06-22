@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Qbrix Solution - Leading AI and Data Science software house specializing in Machine Learning, Deep Learning, Data Analytics, and E-commerce solutions">
+    <meta name="keywords" content="AI, Machine Learning, Deep Learning, Data Analytics, Data Visualization, E-commerce, Software Development">
+    <meta name="author" content="Qbrix Solution">
+    <meta property="og:title" content="Qbrix Solution - AI-Powered Digital Transformation">
+    <meta property="og:description" content="Transform your business with cutting-edge AI, Machine Learning, and Data Analytics solutions">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://qbrixsolution.com">
+    <title>Qbrix Solution - Innovative AI & Data Science Solutions</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🤖</text></svg>">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loading-content">
+            <div class="loading-logo">
+                <div class="logo-animation">
+                    <i class="fas fa-brain"></i>
+                </div>
+                <h2>Qbrix Solution</h2>
+            </div>
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+            </div>
+            <p class="loading-text">Initializing AI Systems...</p>
+        </div>
+    </div>
+
+    <!-- Animated Background Particles -->
+    <div id="particles-js"></div>
+    
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <div class="logo-icon">
+                    <i class="fas fa-brain"></i>
+                </div>
+                <h2>Qbrix Solution</h2>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link active" aria-current="page">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="services.html" class="nav-link">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a href="ai-solutions.html" class="nav-link">AI Solutions</a>
+                </li>
+                <li class="nav-item">
+                    <a href="portfolio.html" class="nav-link">Portfolio</a>
+                </li>
+                <li class="nav-item">
+                    <a href="team.html" class="nav-link">Team</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="nav-actions">
+                <button class="theme-toggle" aria-label="Toggle dark mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <div class="hamburger" aria-label="Toggle navigation menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="badge-icon">🚀</span>
+                    <span>AI-Powered Innovation</span>
+                </div>
+                <h1 class="hero-title">
+                    AI-Powered Solutions for 
+                    <span class="gradient-text">Digital Transformation</span>
+                </h1>
+                <p class="hero-description">
+                    We specialize in cutting-edge AI, Machine Learning, Deep Learning, Data Analytics, 
+                    Data Visualization, and e-commerce solutions. Transform your business with intelligent 
+                    technology that drives growth and innovation.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn btn-primary">
+                        <span>Start AI Project</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="#portfolio" class="btn btn-secondary">
+                        <span>View AI Solutions</span>
+                        <i class="fas fa-play"></i>
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="50">0</span>
+                        <span class="stat-label">AI Projects</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="99">0</span>
+                        <span class="stat-label">% Accuracy</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="5">0</span>
+                        <span class="stat-label">Years Experience</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="hero-graphic">
+                    <div class="floating-card card-1">
+                        <i class="fas fa-brain"></i>
+                        <span>AI & ML</span>
+                    </div>
+                    <div class="floating-card card-2">
+                        <i class="fas fa-chart-line"></i>
+                        <span>Data Analytics</span>
+                    </div>
+                    <div class="floating-card card-3">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span>E-commerce</span>
+                    </div>
+                    <!-- AI Video Element -->
+                    <div class="ai-video-container">
+                        <div class="ai-video-placeholder">
+                            <div class="ai-animation">
+                                <div class="neural-network">
+                                    <div class="node"></div>
+                                    <div class="node"></div>
+                                    <div class="node"></div>
+                                    <div class="node"></div>
+                                    <div class="node"></div>
+                                    <div class="node"></div>
+                                    <div class="connection"></div>
+                                    <div class="connection"></div>
+                                    <div class="connection"></div>
+                                    <div class="connection"></div>
+                                    <div class="connection"></div>
+                                    <div class="connection"></div>
+                                </div>
+                            </div>
+                            <div class="ai-overlay">
+                                <i class="fas fa-play-circle"></i>
+                                <span>Deep Learning Solutions</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Animated Background Elements -->
+        <div class="hero-bg-elements">
+            <div class="bg-element element-1"></div>
+            <div class="bg-element element-2"></div>
+            <div class="bg-element element-3"></div>
+            <div class="bg-element element-4"></div>
+        </div>
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator">
+            <div class="scroll-arrow">
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Video Showcase Section -->
+    <section id="ai-showcase" class="ai-showcase">
+        <div class="container">
+            <div class="section-header">
+                <h2>AI & Machine Learning Excellence</h2>
+                <p>Cutting-edge artificial intelligence solutions that transform businesses</p>
+            </div>
+            <div class="ai-video-grid">
+                <div class="ai-video-item">
+                    <div class="video-container">
+                        <div class="video-placeholder">
+                            <div class="ai-animation-circle">
+                                <div class="pulse-ring"></div>
+                                <div class="pulse-ring"></div>
+                                <div class="pulse-ring"></div>
+                                <i class="fas fa-brain"></i>
+                            </div>
+                        </div>
+                        <div class="video-overlay">
+                            <h3>Deep Learning</h3>
+                            <p>Neural networks and advanced AI algorithms</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="ai-video-item">
+                    <div class="video-container">
+                        <div class="video-placeholder">
+                            <div class="ai-animation-data">
+                                <div class="data-stream">
+                                    <span>01</span>
+                                    <span>10</span>
+                                    <span>11</span>
+                                    <span>00</span>
+                                    <span>01</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="video-overlay">
+                            <h3>Data Analytics</h3>
+                            <p>Real-time insights and predictive modeling</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="ai-video-item">
+                    <div class="video-container">
+                        <div class="video-placeholder">
+                            <div class="ai-animation-robot">
+                                <div class="robot-face">
+                                    <div class="eye left-eye"></div>
+                                    <div class="eye right-eye"></div>
+                                    <div class="mouth"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="video-overlay">
+                            <h3>Machine Learning</h3>
+                            <p>Intelligent algorithms that learn and adapt</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our AI & Data Services</h2>
+                <p>Comprehensive artificial intelligence and data science solutions for modern businesses</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>Artificial Intelligence</h3>
+                    <p>Custom AI solutions including natural language processing, computer vision, and intelligent automation systems that revolutionize business processes.</p>
+                    <ul class="service-features">
+                        <li>Natural Language Processing</li>
+                        <li>Computer Vision</li>
+                        <li>Intelligent Automation</li>
+                        <li>AI Chatbots</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3>Machine Learning</h3>
+                    <p>Advanced machine learning algorithms and predictive models that help businesses make data-driven decisions and optimize operations.</p>
+                    <ul class="service-features">
+                        <li>Predictive Analytics</li>
+                        <li>Recommendation Systems</li>
+                        <li>Pattern Recognition</li>
+                        <li>ML Model Development</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <h3>Deep Learning</h3>
+                    <p>Neural network architectures and deep learning solutions for complex problem-solving, image recognition, and advanced AI applications.</p>
+                    <ul class="service-features">
+                        <li>Neural Networks</li>
+                        <li>Image Recognition</li>
+                        <li>Speech Processing</li>
+                        <li>Deep Learning Models</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <h3>Data Analytics</h3>
+                    <p>Comprehensive data analysis services that transform raw data into actionable insights for strategic business decisions.</p>
+                    <ul class="service-features">
+                        <li>Business Intelligence</li>
+                        <li>Statistical Analysis</li>
+                        <li>Data Mining</li>
+                        <li>Performance Analytics</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-chart-pie"></i>
+                    </div>
+                    <h3>Data Visualization</h3>
+                    <p>Interactive dashboards and compelling visual representations that make complex data accessible and actionable for stakeholders.</p>
+                    <ul class="service-features">
+                        <li>Interactive Dashboards</li>
+                        <li>Real-time Monitoring</li>
+                        <li>Custom Visualizations</li>
+                        <li>Data Storytelling</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <h3>E-commerce Solutions</h3>
+                    <p>AI-powered e-commerce platforms with intelligent product recommendations, automated inventory management, and personalized shopping experiences.</p>
+                    <ul class="service-features">
+                        <li>AI Product Recommendations</li>
+                        <li>Inventory Management</li>
+                        <li>Personalized Shopping</li>
+                        <li>Payment Integration</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>About Qbrix Solution</h2>
+                    <p class="about-description">
+                        We are a specialized AI and data science software house, dedicated to transforming businesses 
+                        through cutting-edge artificial intelligence, machine learning, and data analytics solutions. 
+                        Our team of expert data scientists, AI engineers, and ML specialists deliver innovative 
+                        solutions that drive digital transformation and business growth.
+                    </p>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <h3>50+</h3>
+                            <p>AI Projects Delivered</p>
+                        </div>
+                        <div class="stat">
+                            <h3>30+</h3>
+                            <p>ML Models Deployed</p>
+                        </div>
+                        <div class="stat">
+                            <h3>5+</h3>
+                            <p>Years AI Experience</p>
+                        </div>
+                        <div class="stat">
+                            <h3>99%</h3>
+                            <p>Model Accuracy</p>
+                        </div>
+                    </div>
+                    <div class="about-values">
+                        <h3>Our AI Expertise</h3>
+                        <div class="values-grid">
+                            <div class="value-item">
+                                <i class="fas fa-brain"></i>
+                                <h4>Deep Learning</h4>
+                                <p>Advanced neural networks and AI algorithms</p>
+                            </div>
+                            <div class="value-item">
+                                <i class="fas fa-chart-line"></i>
+                                <h4>Data Science</h4>
+                                <p>Comprehensive analytics and insights</p>
+                            </div>
+                            <div class="value-item">
+                                <i class="fas fa-robot"></i>
+                                <h4>AI Innovation</h4>
+                                <p>Cutting-edge artificial intelligence solutions</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="ai-demo-container">
+                        <div class="ai-demo-animation">
+                            <div class="floating-elements">
+                                <div class="floating-icon">
+                                    <i class="fas fa-brain"></i>
+                                </div>
+                                <div class="floating-icon">
+                                    <i class="fas fa-chart-line"></i>
+                                </div>
+                                <div class="floating-icon">
+                                    <i class="fas fa-robot"></i>
+                                </div>
+                            </div>
+                            <div class="central-ai-element">
+                                <div class="ai-core">
+                                    <i class="fas fa-microchip"></i>
+                                </div>
+                                <div class="ai-rings">
+                                    <div class="ring ring-1"></div>
+                                    <div class="ring ring-2"></div>
+                                    <div class="ring ring-3"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our AI & Data Projects</h2>
+                <p>Showcasing our latest artificial intelligence and data science solutions</p>
+            </div>
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <div class="ai-video-preview">
+                            <div class="video-animation">
+                                <div class="code-matrix">
+                                    <div class="matrix-line">
+                                        <span>import</span> <span>tensorflow</span> <span>as</span> <span>tf</span>
+                                    </div>
+                                    <div class="matrix-line">
+                                        <span>model</span> <span>=</span> <span>tf.keras.Sequential()</span>
+                                    </div>
+                                    <div class="matrix-line">
+                                        <span>model.fit(X_train,</span> <span>y_train)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>AI-Powered E-commerce Platform</h3>
+                        <p>An intelligent e-commerce solution with AI-driven product recommendations, automated inventory management, and personalized shopping experiences using deep learning algorithms.</p>
+                        <div class="portfolio-tags">
+                            <span>TensorFlow</span>
+                            <span>Python</span>
+                            <span>React</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <div class="ai-video-preview">
+                            <div class="video-animation">
+                                <div class="mobile-interface">
+                                    <div class="screen">
+                                        <div class="app-icon"></div>
+                                        <div class="app-icon"></div>
+                                        <div class="app-icon"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>Predictive Analytics Dashboard</h3>
+                        <p>A comprehensive business intelligence platform with machine learning models for sales forecasting, customer behavior analysis, and real-time predictive insights.</p>
+                        <div class="portfolio-tags">
+                            <span>Scikit-learn</span>
+                            <span>Django</span>
+                            <span>PostgreSQL</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <div class="ai-video-preview">
+                            <div class="video-animation">
+                                <div class="dashboard-preview">
+                                    <div class="chart-bar"></div>
+                                    <div class="chart-bar"></div>
+                                    <div class="chart-bar"></div>
+                                    <div class="chart-bar"></div>
+                                    <div class="chart-line"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>Data Visualization Platform</h3>
+                        <p>An interactive data visualization platform with real-time analytics, custom dashboards, and AI-powered insights for complex business data analysis.</p>
+                        <div class="portfolio-tags">
+                            <span>D3.js</span>
+                            <span>Python</span>
+                            <span>MongoDB</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <div class="ai-video-preview">
+                            <div class="video-animation">
+                                <div class="hr-system">
+                                    <div class="user-avatar"></div>
+                                    <div class="user-avatar"></div>
+                                    <div class="user-avatar"></div>
+                                    <div class="progress-bar"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>Computer Vision System</h3>
+                        <p>A deep learning-based computer vision system for automated quality control, object detection, and image recognition in manufacturing processes.</p>
+                        <div class="portfolio-tags">
+                            <span>OpenCV</span>
+                            <span>PyTorch</span>
+                            <span>Flask</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="team">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our AI & Data Science Team</h2>
+                <p>Meet the expert data scientists and AI engineers behind our innovative solutions</p>
+            </div>
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="member-avatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h3>Dr. Ahmed Khan</h3>
+                    <p class="member-role">Chief AI Officer</p>
+                    <p class="member-bio">PhD in Machine Learning with 10+ years experience in deep learning, computer vision, and AI strategy.</p>
+                    <div class="member-social">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="member-avatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h3>Sarah Johnson</h3>
+                    <p class="member-role">Lead Data Scientist</p>
+                    <p class="member-bio">Expert in predictive analytics, statistical modeling, and building scalable ML pipelines.</p>
+                    <div class="member-social">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="member-avatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h3>Michael Chen</h3>
+                    <p class="member-role">ML Engineer</p>
+                    <p class="member-bio">Specialized in deploying machine learning models, MLOps, and production AI systems.</p>
+                    <div class="member-social">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="member-avatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h3>Emily Rodriguez</h3>
+                    <p class="member-role">Data Visualization Expert</p>
+                    <p class="member-bio">Creating compelling data stories through interactive dashboards and visual analytics.</p>
+                    <div class="member-social">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-dribbble"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Start Your AI Journey</h2>
+                <p>Ready to transform your business with artificial intelligence? Let's discuss your AI and data science needs.</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Address</h3>
+                            <p>123 AI Innovation District<br>Tech City, State 12345</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Phone</h3>
+                            <p>+1 (555) 123-4567</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Email</h3>
+                            <p>ai@qbrixsolution.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Business Hours</h3>
+                            <p>Monday - Friday: 9:00 AM - 6:00 PM<br>Saturday: 10:00 AM - 4:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="subject" name="subject" placeholder="AI Project Type" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" placeholder="Describe your AI/ML requirements" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Start AI Project</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Qbrix Solution</h3>
+                    <p>Leading AI and data science software house specializing in machine learning, deep learning, data analytics, and intelligent e-commerce solutions.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>AI Services</h4>
+                    <ul>
+                        <li><a href="#services">Machine Learning</a></li>
+                        <li><a href="#services">Deep Learning</a></li>
+                        <li><a href="#services">Data Analytics</a></li>
+                        <li><a href="#services">Computer Vision</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Solutions</h4>
+                    <ul>
+                        <li><a href="#portfolio">AI E-commerce</a></li>
+                        <li><a href="#portfolio">Predictive Analytics</a></li>
+                        <li><a href="#portfolio">Data Visualization</a></li>
+                        <li><a href="#portfolio">ML Models</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>AI Newsletter</h4>
+                    <p>Stay updated with the latest AI trends, ML insights, and data science innovations.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Enter your email">
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Qbrix Solution - AI & Data Science Specialists. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
