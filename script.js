@@ -1,3 +1,38 @@
+// COMPREHENSIVE ZOOM PREVENTION
+document.addEventListener('DOMContentLoaded', function() {
+    // Prevent any zoom or scaling issues
+    document.documentElement.style.zoom = '1';
+    document.body.style.zoom = '1';
+    
+    // Override any transform styles that might cause scaling
+    const preventScaling = () => {
+        const elements = document.querySelectorAll('*');
+        elements.forEach(el => {
+            if (el.style.transform && el.style.transform.includes('scale')) {
+                el.style.transform = el.style.transform.replace(/scale\([^)]*\)/g, '');
+            }
+        });
+    };
+    
+    // Run immediately and on any DOM changes
+    preventScaling();
+    
+    // Create a mutation observer to prevent scaling
+    const observer = new MutationObserver(preventScaling);
+    observer.observe(document.body, {
+        childList: true,
+        subtree: true,
+        attributes: true,
+        attributeFilter: ['style']
+    });
+    
+    // Prevent zoom on window resize
+    window.addEventListener('resize', () => {
+        document.documentElement.style.zoom = '1';
+        document.body.style.zoom = '1';
+    });
+});
+
 // Modern Website Enhancement System
 class WebsiteEnhancer {
     constructor() {
@@ -663,15 +698,13 @@ class AIVideoController {
         const nodes = document.querySelectorAll('.node');
         const connections = document.querySelectorAll('.connection');
         
-        // Add pulsing effect to nodes
+        // Add pulsing effect to nodes without scaling
         nodes.forEach((node, index) => {
             node.addEventListener('mouseenter', () => {
-                node.style.transform = 'scale(1.5)';
                 node.style.boxShadow = '0 0 20px rgba(255, 107, 107, 0.8)';
             });
             
             node.addEventListener('mouseleave', () => {
-                node.style.transform = 'scale(1)';
                 node.style.boxShadow = 'none';
             });
         });
@@ -775,9 +808,8 @@ class ContactForm {
         submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
         submitBtn.disabled = true;
         
-        // Add loading animation
+        // Add loading animation without scaling
         this.form.style.opacity = '0.7';
-        this.form.style.transform = 'scale(0.98)';
     }
 
     resetFormAnimations() {
@@ -786,7 +818,6 @@ class ContactForm {
         submitBtn.disabled = false;
         
         this.form.style.opacity = '1';
-        this.form.style.transform = 'scale(1)';
     }
 
     isValidEmail(email) {
@@ -829,7 +860,7 @@ class ContactForm {
             border-radius: 15px;
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
         z-index: 10000;
-            transform: translateX(400px) scale(0.8);
+            transform: translateX(400px);
             transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
         max-width: 400px;
             backdrop-filter: blur(10px);
@@ -839,20 +870,20 @@ class ContactForm {
     
     // Animate in
     setTimeout(() => {
-            notification.style.transform = 'translateX(0) scale(1)';
+            notification.style.transform = 'translateX(0)';
     }, 100);
     
     // Close button functionality
     const closeBtn = notification.querySelector('.notification-close');
     closeBtn.addEventListener('click', () => {
-            notification.style.transform = 'translateX(400px) scale(0.8)';
+            notification.style.transform = 'translateX(400px)';
         setTimeout(() => notification.remove(), 300);
     });
     
     // Auto remove after 5 seconds
     setTimeout(() => {
         if (notification.parentNode) {
-                notification.style.transform = 'translateX(400px) scale(0.8)';
+                notification.style.transform = 'translateX(400px)';
             setTimeout(() => notification.remove(), 300);
         }
     }, 5000);
@@ -925,6 +956,24 @@ document.addEventListener('DOMContentLoaded', () => {
     const floatingCards = document.querySelectorAll('.floating-card');
     floatingCards.forEach((card, index) => {
         card.style.animationDelay = `${index * 0.5}s`;
+    });
+
+    // Scroll-based animations
+    const fadeInElements = document.querySelectorAll('.fade-in');
+
+    const fadeInObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.1
+    });
+
+    fadeInElements.forEach(el => {
+        fadeInObserver.observe(el);
     });
 });
 
