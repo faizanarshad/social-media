@@ -2763,7 +2763,6 @@ body {
     border-radius: 20px;
     border: 5px solid white;
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    transform: scale(1.15);
     transition: transform 0.4s ease;
 }
 
@@ -3216,6 +3215,26 @@ body {
 
 /* Prevent zoom issues on buttons and interactive elements */
 .btn, .btn:hover, .btn:focus, .btn:active {
+    zoom: 1 !important;
+    transform: none !important;
+    scale: none !important;
+}
+
+/* Fix for "Explore Our Platform" button zoom issue */
+.btn-primary, .btn-secondary {
+    zoom: 1 !important;
+    transform: none !important;
+    scale: none !important;
+}
+
+.btn-primary:hover, .btn-secondary:hover {
+    zoom: 1 !important;
+    transform: none !important;
+    scale: none !important;
+}
+
+/* Prevent zoom/scale on buttons only */
+.btn, .btn:hover {
     zoom: 1 !important;
     transform: none !important;
     scale: none !important;
