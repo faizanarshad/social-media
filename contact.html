@@ -17,21 +17,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🤖</text></svg>">
 </head>
-<body class="dark-theme">
-    <canvas id="contact-3d-bg"></canvas>
-
-    <!-- Loading Screen -->
-    <div id="loading-screen" class="loading-screen">
-        <div class="loading-content">
-            <div class="loading-logo">
-                <div class="logo-animation"><i class="fas fa-brain"></i></div>
-                <h2>Qbrix Solution</h2>
-            </div>
-            <div class="loading-bar"><div class="loading-progress"></div></div>
-            <p class="loading-text">Loading Secure Contact Portal...</p>
-        </div>
-    </div>
-    
+<body class="contact-page">
+    <canvas id="contact-3d-bg" style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: 0;"></canvas>
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
@@ -55,55 +42,43 @@
             </div>
         </div>
     </nav>
-    
-    <!-- Hero Section -->
-    <section class="contact-hero">
-        <div class="hero-content">
-            <h1 class="hero-title">Get in Touch</h1>
-            <p class="hero-description">We'd love to hear from you. Let's build the future together.</p>
+    <!-- Contact Section Modern (first main content after navbar) -->
+    <section class="contact-section-modern">
+        <div class="contact-header-modern">
+            <h1 class="contact-title-gradient">Contact Us</h1>
+            <p class="contact-subtitle">We'd love to hear from you. Let's build the future together.</p>
         </div>
-    </section>
-
-    <div class="contact-content-wrapper">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 mb-5 mb-lg-0">
-                    <div class="contact-info-modern">
-                        <div class="contact-item">
-                            <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
-                            <div><h3>Our Location</h3><p>123 AI Innovation District, Tech City</p></div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-icon"><i class="fas fa-envelope-open-text"></i></div>
-                            <div><h3>Email Us</h3><p>ai@qbrixsolution.com</p></div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
-                            <div><h3>Call Us</h3><p>+1 (555) 123-4567</p></div>
-                        </div>
-                    </div>
+        <div class="contact-modern-grid">
+            <div class="contact-modern-card contact-modern-info">
+                <div class="contact-modern-item">
+                    <div class="contact-modern-icon"><i class="fas fa-map-marker-alt"></i></div>
+                    <div><h3>Our Location</h3><p>123 AI Innovation District, Tech City</p></div>
                 </div>
-                <div class="col-lg-6">
-                    <div class="contact-form-modern">
-                        <h2 class="mb-4">Send a Message</h2>
-                        <form id="contactForm">
-                            <div class="form-group mb-3"><input type="text" class="form-control" placeholder="Your Name" required></div>
-                            <div class="form-group mb-3"><input type="email" class="form-control" placeholder="Your Email" required></div>
-                            <div class="form-group mb-3"><input type="text" class="form-control" placeholder="Subject" required></div>
-                            <div class="form-group mb-4"><textarea class="form-control" rows="5" placeholder="Your Message" required></textarea></div>
-                            <button type="submit" class="btn btn-primary w-100">Send Message</button>
-                        </form>
-                    </div>
+                <div class="contact-modern-item">
+                    <div class="contact-modern-icon"><i class="fas fa-envelope-open-text"></i></div>
+                    <div><h3>Email Us</h3><p>ai@qbrixsolution.com</p></div>
+                </div>
+                <div class="contact-modern-item">
+                    <div class="contact-modern-icon"><i class="fas fa-phone-alt"></i></div>
+                    <div><h3>Call Us</h3><p>+1 (555) 123-4567</p></div>
                 </div>
             </div>
+            <div class="contact-modern-card contact-modern-form">
+                <h2>Send a Message</h2>
+                <form id="contactForm">
+                    <div class="form-group"><input type="text" class="form-control" placeholder="Your Name" required></div>
+                    <div class="form-group"><input type="email" class="form-control" placeholder="Your Email" required></div>
+                    <div class="form-group"><input type="text" class="form-control" placeholder="Subject" required></div>
+                    <div class="form-group"><textarea class="form-control" rows="5" placeholder="Your Message" required></textarea></div>
+                    <button type="submit" class="btn btn-primary w-100">Send Message</button>
+                </form>
+            </div>
         </div>
-    </div>
-
+    </section>
     <!-- WhatsApp FAB -->
     <a href="https://wa.me/15551234567" class="whatsapp-fab" target="_blank" aria-label="Contact us on WhatsApp">
-        <i class="fab fa-whatsapp"></i>
+        <i class="fab fa-whatsapp"></i> <span class="whatsapp-text">WhatsApp</span>
     </a>
-    
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
@@ -150,43 +125,38 @@
             </div>
         </div>
     </footer>
-
     <script src="script.js"></script>
     <script>
-        // 3D Background
-        const scene = new THREE.Scene();
-        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-        const renderer = new THREE.WebGLRenderer({ canvas: document.getElementById('contact-3d-bg'), alpha: true });
+    // 3D Background (starfield)
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+    const renderer = new THREE.WebGLRenderer({ canvas: document.getElementById('contact-3d-bg'), alpha: true });
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    const starsGeometry = new THREE.BufferGeometry();
+    const starsMaterial = new THREE.PointsMaterial({ color: 0xffffff, size: 0.7 });
+    const starVertices = [];
+    for (let i = 0; i < 10000; i++) {
+        const x = (Math.random() - 0.5) * 2000;
+        const y = (Math.random() - 0.5) * 2000;
+        const z = (Math.random() - 0.5) * 2000;
+        starVertices.push(x, y, z);
+    }
+    starsGeometry.setAttribute('position', new THREE.Float32BufferAttribute(starVertices, 3));
+    const stars = new THREE.Points(starsGeometry, starsMaterial);
+    scene.add(stars);
+    camera.position.z = 5;
+    function animate() {
+        requestAnimationFrame(animate);
+        stars.rotation.x += 0.0001;
+        stars.rotation.y += 0.0002;
+        renderer.render(scene, camera);
+    }
+    animate();
+    window.addEventListener('resize', () => {
+        camera.aspect = window.innerWidth / window.innerHeight;
+        camera.updateProjectionMatrix();
         renderer.setSize(window.innerWidth, window.innerHeight);
-
-        const starsGeometry = new THREE.BufferGeometry();
-        const starsMaterial = new THREE.PointsMaterial({ color: 0xffffff, size: 0.7 });
-        const starVertices = [];
-        for (let i = 0; i < 10000; i++) {
-            const x = (Math.random() - 0.5) * 2000;
-            const y = (Math.random() - 0.5) * 2000;
-            const z = (Math.random() - 0.5) * 2000;
-            starVertices.push(x, y, z);
-        }
-        starsGeometry.setAttribute('position', new THREE.Float32BufferAttribute(starVertices, 3));
-        const stars = new THREE.Points(starsGeometry, starsMaterial);
-        scene.add(stars);
-
-        camera.position.z = 5;
-
-        function animate() {
-            requestAnimationFrame(animate);
-            stars.rotation.x += 0.0001;
-            stars.rotation.y += 0.0002;
-            renderer.render(scene, camera);
-        }
-        animate();
-
-        window.addEventListener('resize', () => {
-            camera.aspect = window.innerWidth / window.innerHeight;
-            camera.updateProjectionMatrix();
-            renderer.setSize(window.innerWidth, window.innerHeight);
-        });
+    });
     </script>
 </body>
 </html>

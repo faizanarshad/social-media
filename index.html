@@ -3,332 +3,177 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Qbrix Solution - Leading AI and Data Science software house specializing in Machine Learning, Deep Learning, Data Analytics, and E-commerce solutions">
-    <meta name="keywords" content="AI, Machine Learning, Deep Learning, Data Analytics, Data Visualization, E-commerce, Software Development">
+    <meta name="description" content="Qbrix Solution - AI Innovation for Business Transformation">
+    <meta name="keywords" content="AI, Machine Learning, Deep Learning, Data Analytics, Automation, Computer Vision, Python, JavaScript, Transformer">
     <meta name="author" content="Qbrix Solution">
-    <meta property="og:title" content="Qbrix Solution - AI-Powered Digital Transformation">
-    <meta property="og:description" content="Transform your business with cutting-edge AI, Machine Learning, and Data Analytics solutions">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://qbrixsolution.com">
-    <title>Qbrix Solution - Innovative AI & Data Science Solutions</title>
+    <title>Qbrix Solution - AI Innovation for Business Transformation</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🤖</text></svg>">
 </head>
-<body>
-    <!-- Loading Screen -->
-    <div id="loading-screen" class="loading-screen">
-        <div class="loading-content">
-            <div class="loading-logo">
-                <div class="logo-animation">
-                    <i class="fas fa-brain"></i>
+<body class="home-page" style="background: linear-gradient(135deg, #181c2a 0%, #232946 100%); color: #fff;">
+    <!-- Navigation Bar -->
+    <nav class="navbar" style="position: fixed; top: 0; width: 100%; background: rgba(24,28,42,0.98); backdrop-filter: blur(10px); z-index: 1000; border-bottom: 1px solid rgba(255,255,255,0.08);">
+        <div class="nav-container" style="max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 20px; height: 70px;">
+            <div class="nav-logo" style="display: flex; align-items: center; gap: 0.75rem;">
+                <div class="logo-icon" style="width: 40px; height: 40px; background: linear-gradient(135deg, #4f8cff, #764ba2); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                    <i class="fas fa-brain" style="color: #fff; font-size: 1.2rem;"></i>
                 </div>
-                <h2>Qbrix Solution</h2>
+                <h2 style="background: linear-gradient(135deg, #4f8cff, #764ba2); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: 700; font-size: 1.5rem; margin: 0;">Qbrix Solution</h2>
             </div>
-            <div class="loading-bar">
-                <div class="loading-progress"></div>
-            </div>
-            <p class="loading-text">Initializing AI Systems...</p>
-        </div>
-    </div>
-
-    <!-- Animated Background Particles -->
-    <div id="particles-js"></div>
-    
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <div class="logo-icon">
-                    <i class="fas fa-brain"></i>
-                </div>
-                <h2>Qbrix Solution</h2>
-            </div>
-            <ul class="nav-menu">
-                <li class="nav-item">
-                    <a href="index.html" class="nav-link active" aria-current="page">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a href="services.html" class="nav-link">Services</a>
-                </li>
-                <li class="nav-item">
-                    <a href="ai-solutions.html" class="nav-link">AI Solutions</a>
-                </li>
-                <li class="nav-item">
-                    <a href="portfolio.html" class="nav-link">Portfolio</a>
-                </li>
-                <li class="nav-item">
-                    <a href="team.html" class="nav-link">Team</a>
-                </li>
-                <li class="nav-item">
-                    <a href="contact.html" class="nav-link">Contact</a>
-                </li>
+            <ul class="nav-menu" style="display: flex; align-items: center; list-style: none; gap: 2rem; margin: 0;">
+                <li class="nav-item"><a href="index.html" class="nav-link active" aria-current="page" style="color: #4ecdc4; text-decoration: none; font-weight: 500;">Home</a></li>
+                <li class="nav-item"><a href="services.html" class="nav-link" style="color: #fff; text-decoration: none; font-weight: 500;">Services</a></li>
+                <li class="nav-item"><a href="ai-solutions.html" class="nav-link" style="color: #fff; text-decoration: none; font-weight: 500;">AI Solutions</a></li>
+                <li class="nav-item"><a href="portfolio.html" class="nav-link" style="color: #fff; text-decoration: none; font-weight: 500;">Portfolio</a></li>
+                <li class="nav-item"><a href="team.html" class="nav-link" style="color: #fff; text-decoration: none; font-weight: 500;">Team</a></li>
+                <li class="nav-item"><a href="blog.html" class="nav-link" style="color: #fff; text-decoration: none; font-weight: 500;">Blog</a></li>
+                <li class="nav-item"><a href="contact.html" class="nav-link" style="color: #fff; text-decoration: none; font-weight: 500;">Contact</a></li>
             </ul>
-            <div class="nav-actions">
-                <button class="theme-toggle" aria-label="Toggle dark mode">
-                    <i class="fas fa-moon"></i>
-                </button>
-                <div class="hamburger" aria-label="Toggle navigation menu">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </div>
-            </div>
         </div>
     </nav>
-
+    <div style="height: 70px;"></div>
     <!-- Hero Section -->
-    <section id="home" class="hero-modernized">
-        <div class="hero-container">
-            <div class="hero-content">
-                <h1 class="hero-title">
-                    The AI-Powered Platform to 
-                    <span class="gradient-text">Build, Run & Scale</span>
-                    Your Digital Future
-                </h1>
-                <p class="hero-description">
-                    Transform your business with cutting-edge AI and data-driven solutions. We help enterprises modernize, innovate, and accelerate growth through intelligent technology.
-                </p>
-                <div class="hero-buttons">
-                    <a href="services.html" class="btn btn-primary">
-                        <span>Explore Our Platform</span>
-                        <i class="fas fa-arrow-right"></i>
-                    </a>
-                    <a href="contact.html" class="btn btn-secondary">
-                        <span>Get Started Free</span>
-                        <i class="fas fa-rocket"></i>
-                    </a>
-                </div>
-                <div class="hero-stats">
-                    <div class="stat-item">
-                        <span class="stat-number" data-target="50">0</span>
-                        <span class="stat-label">AI Projects Delivered</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number" data-target="99">0</span>
-                        <span class="stat-label">% Client Satisfaction</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number" data-target="5">0</span>
-                        <span class="stat-label">Years of Excellence</span>
-                    </div>
-                </div>
+    <section class="hero-modern-ai" style="background: linear-gradient(135deg, #232946 0%, #4f8cff 100%); color: #fff; padding: 100px 0 60px 0;">
+        <div class="container" style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 48px; max-width: 1200px; margin: 0 auto;">
+            <div style="flex: 1; min-width: 320px;">
+                <h1 style="font-size: 3rem; font-weight: 800; line-height: 1.1; margin-bottom: 18px;">AI Solutions for a Smarter Tomorrow</h1>
+                <p style="font-size: 1.25rem; margin-bottom: 2rem; max-width: 480px; color: #e0e6f7;">Empowering businesses with next-generation artificial intelligence, automation, and data-driven insights. Let's build the future together.</p>
+                <a href="#contact" class="btn btn-primary" style="font-size: 1.1rem;">Get Started with AI</a>
             </div>
-            <div class="hero-image-container">
-                <!-- Floating Icons Animation -->
-                <div class="floating-icons-container">
-                    <i class="fas fa-brain floating-icon"></i>
-                    <i class="fas fa-cogs floating-icon"></i>
-                    <i class="fas fa-database floating-icon"></i>
-                    <i class="fas fa-chart-line floating-icon"></i>
-                    <i class="fas fa-robot floating-icon"></i>
-                </div>
-            </div>
-        </div>
-        <div class="scroll-indicator">
-            <div class="scroll-arrow">
-                <i class="fas fa-chevron-down"></i>
+            <div style="flex: 1; min-width: 320px; display: flex; justify-content: center; align-items: center;">
+                <img src="app/images/ai-solutions/robot.jpg" alt="AI Illustration" style="width: 320px; border-radius: 24px; box-shadow: 0 8px 32px rgba(31,38,135,0.18);">
             </div>
         </div>
     </section>
 
-    <!-- Core Services Section -->
-    <section id="services-overview" class="services-overview">
-        <div class="container">
-            <div class="section-header fade-in">
-                <h2>Our Core AI Services</h2>
-                <p>We deliver specialized AI solutions that solve complex challenges and create business value.</p>
-            </div>
-            <div class="services-overview-grid">
-                <!-- Service 1: AI & Machine Learning -->
-                <div class="service-card-modern fade-in">
-                    <div class="service-card-modern-bg"></div>
-                    <div class="service-card-content">
-                        <div class="service-card-icon"><i class="fas fa-brain"></i></div>
-                        <h3 class="service-card-title">AI & Machine Learning</h3>
-                        <p class="service-card-description">Harness the power of predictive models and intelligent algorithms to automate processes and unlock data-driven insights.</p>
-                        <ul class="service-card-features">
-                            <li><i class="fas fa-check-circle"></i> Custom Model Development</li>
-                            <li><i class="fas fa-check-circle"></i> Natural Language Processing</li>
-                            <li><i class="fas fa-check-circle"></i> Computer Vision</li>
-                        </ul>
-                    </div>
+    <!-- Services Section -->
+    <section class="services-modern" style="background: linear-gradient(135deg, #181c2a 0%, #232946 100%); padding: 80px 0; color: #fff;">
+        <div class="container" style="max-width: 1200px; margin: 0 auto;">
+            <h2 class="section-title" style="text-align: center; font-size: 2.5rem; font-weight: 800; margin-bottom: 2rem; background: linear-gradient(135deg, #4f8cff, #764ba2); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; color: #fff;">Our AI Services</h2>
+            <div class="services-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 2rem;">
+                <div class="service-card-modern" style="background: #232946; border-radius: 18px; box-shadow: 0 4px 16px rgba(0,0,0,0.12); padding: 2.5rem; text-align: center; color: #fff;">
+                    <div style="font-size: 2.5rem; color: #4f8cff; margin-bottom: 1rem;"><i class="fas fa-brain"></i></div>
+                    <h3 style="font-size: 1.3rem; font-weight: 700; margin-bottom: 0.5rem;">AI & Machine Learning</h3>
+                    <p style="color: #bfc8e6; margin-bottom: 1.2rem;">Custom models, neural networks, and automation for your business.</p>
+                    <div style="font-size: 1.3rem; color: #4ecdc4;"><i class="fab fa-python" title="Python"></i> <i class="fab fa-js" title="JavaScript"></i></div>
                 </div>
-                <!-- Service 2: Data Analytics & BI -->
-                <div class="service-card-modern fade-in">
-                    <div class="service-card-modern-bg"></div>
-                    <div class="service-card-content">
-                        <div class="service-card-icon"><i class="fas fa-chart-line"></i></div>
-                        <h3 class="service-card-title">Data Analytics & BI</h3>
-                        <p class="service-card-description">Transform raw data into actionable intelligence with our advanced analytics, visualization, and business intelligence dashboards.</p>
-                        <ul class="service-card-features">
-                            <li><i class="fas fa-check-circle"></i> Predictive Analytics</li>
-                            <li><i class="fas fa-check-circle"></i> Interactive Dashboards</li>
-                            <li><i class="fas fa-check-circle"></i> Real-Time Insights</li>
-                        </ul>
-                    </div>
+                <div class="service-card-modern" style="background: #232946; border-radius: 18px; box-shadow: 0 4px 16px rgba(0,0,0,0.12); padding: 2.5rem; text-align: center; color: #fff;">
+                    <div style="font-size: 2.5rem; color: #4f8cff; margin-bottom: 1rem;"><i class="fas fa-eye"></i></div>
+                    <h3 style="font-size: 1.3rem; font-weight: 700; margin-bottom: 0.5rem;">Computer Vision</h3>
+                    <p style="color: #bfc8e6; margin-bottom: 1.2rem;">Image recognition, object detection, and video analytics.</p>
+                    <div style="font-size: 1.3rem; color: #4ecdc4;"><i class="fab fa-python" title="Python"></i></div>
                 </div>
-            </div>
-            <div style="text-align: center; margin-top: 40px;">
-                <a href="services.html" class="btn btn-primary">View All Services</a>
-            </div>
-        </div>
-    </section>
-    
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <div class="about-content fade-in">
-                <div class="about-text">
-                    <h2>Innovating with Purpose</h2>
-                    <p class="about-description">
-                        Qbrix Solution is a specialized AI and data science software house. We are dedicated to transforming businesses through cutting-edge artificial intelligence, machine learning, and data analytics. Our team of expert data scientists and AI engineers delivers innovative solutions that drive digital transformation and sustainable growth.
-                    </p>
-                    <a href="team.html" class="btn btn-secondary">Meet Our Experts <i class="fas fa-arrow-right"></i></a>
+                <div class="service-card-modern" style="background: #232946; border-radius: 18px; box-shadow: 0 4px 16px rgba(0,0,0,0.12); padding: 2.5rem; text-align: center; color: #fff;">
+                    <div style="font-size: 2.5rem; color: #4f8cff; margin-bottom: 1rem;"><i class="fas fa-robot"></i></div>
+                    <h3 style="font-size: 1.3rem; font-weight: 700; margin-bottom: 0.5rem;">Automation & Robotics</h3>
+                    <p style="color: #bfc8e6; margin-bottom: 1.2rem;">End-to-end automation and robotics for seamless operations.</p>
+                    <div style="font-size: 1.3rem; color: #4ecdc4;"><i class="fab fa-python" title="Python"></i> <i class="fab fa-js" title="JavaScript"></i></div>
                 </div>
-                <div class="about-image-modern">
-                    <!-- Placeholder for image -->
+                <div class="service-card-modern" style="background: #232946; border-radius: 18px; box-shadow: 0 4px 16px rgba(0,0,0,0.12); padding: 2.5rem; text-align: center; color: #fff;">
+                    <div style="font-size: 2.5rem; color: #4f8cff; margin-bottom: 1rem;"><i class="fas fa-chart-line"></i></div>
+                    <h3 style="font-size: 1.3rem; font-weight: 700; margin-bottom: 0.5rem;">Data Analytics</h3>
+                    <p style="color: #bfc8e6; margin-bottom: 1.2rem;">Transform data into actionable intelligence and dashboards.</p>
+                    <div style="font-size: 1.3rem; color: #4ecdc4;"><i class="fab fa-python" title="Python"></i> <i class="fab fa-js" title="JavaScript"></i></div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CEO Message Section -->
-    <section id="ceo-message" class="ceo-message">
-        <div class="container">
-            <div class="section-header fade-in">
-                <h2>A Message from Our CEO</h2>
-                <p>Driving innovation and excellence at the heart of AI transformation.</p>
-            </div>
-            <div class="ceo-content fade-in">
-                <div class="ceo-avatar">
-                    <img src="app/images/team/faizan.jpg" alt="Faizan, CEO of Qbrix Solution">
+    <!-- Featured Projects Section -->
+    <section class="projects-modern" style="background: linear-gradient(135deg, #232946 0%, #181c2a 100%); padding: 80px 0; color: #fff;">
+        <div class="container" style="max-width: 1200px; margin: 0 auto;">
+            <h2 class="section-title" style="text-align: center; font-size: 2.5rem; font-weight: 800; margin-bottom: 2rem; background: linear-gradient(135deg, #4f8cff, #764ba2); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; color: #fff;">Featured Projects</h2>
+            <div class="projects-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                <div class="project-card-modern" style="background: #232946; border-radius: 16px; box-shadow: 0 2px 8px rgba(102, 126, 234, 0.12); overflow: hidden; color: #fff;">
+                    <div style="height: 180px; background: url('app/images/ai-solutions/chatbot.jpg') center/cover no-repeat;"></div>
+                    <div style="padding: 1.5rem;">
+                        <h3 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 0.5rem;">Conversational AI Chatbot</h3>
+                        <p style="color: #bfc8e6; margin-bottom: 1rem;">24/7 customer support powered by advanced NLP and transformer models.</p>
+                        <div style="font-size: 1.1rem; color: #4ecdc4;"><i class="fab fa-python"></i></div>
+                    </div>
                 </div>
-                <div class="ceo-text">
-                    <p class="ceo-quote">"As CEO, my vision is to lead Qbrix Solution at the forefront of AI innovation and excellence. We are committed to solving complex challenges and delivering transformative solutions that empower our clients for the future."</p>
-                    <div class="ceo-signature">
-                        <h4 class="ceo-name">Faizan Arshad</h4>
-                        <p class="ceo-title">CEO, Qbrix Solution</p>
+                <div class="project-card-modern" style="background: #232946; border-radius: 16px; box-shadow: 0 2px 8px rgba(102, 126, 234, 0.12); overflow: hidden; color: #fff;">
+                    <div style="height: 180px; background: url('app/images/ai-solutions/vision.png') center/cover no-repeat;"></div>
+                    <div style="padding: 1.5rem;">
+                        <h3 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 0.5rem;">Computer Vision for Manufacturing</h3>
+                        <p style="color: #bfc8e6; margin-bottom: 1rem;">Automated defect detection and quality control using deep learning.</p>
+                        <div style="font-size: 1.1rem; color: #4ecdc4;"><i class="fab fa-python"></i></div>
+                    </div>
+                </div>
+                <div class="project-card-modern" style="background: #232946; border-radius: 16px; box-shadow: 0 2px 8px rgba(102, 126, 234, 0.12); overflow: hidden; color: #fff;">
+                    <div style="height: 180px; background: url('app/images/ai-solutions/predictive.jpeg') center/cover no-repeat;"></div>
+                    <div style="padding: 1.5rem;">
+                        <h3 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 0.5rem;">Predictive Analytics Platform</h3>
+                        <p style="color: #bfc8e6; margin-bottom: 1rem;">Sales forecasting and business intelligence with real-time dashboards.</p>
+                        <div style="font-size: 1.1rem; color: #4ecdc4;"><i class="fab fa-python"></i> <i class="fab fa-js"></i></div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    
+
+    <!-- About Section (CEO Message) -->
+    <section class="ceo-message" style="background: linear-gradient(135deg, #181c2a 0%, #232946 100%); padding: 90px 0 80px 0; position: relative; overflow: hidden;">
+      <div class="container" style="max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: center; gap: 64px; position: relative; z-index: 2;">
+        <div class="ceo-avatar" style="flex: 0.8; min-width: 180px; display: flex; justify-content: center; align-items: center;">
+          <div style="background: rgba(255,255,255,0.12); border-radius: 24px; box-shadow: 0 8px 32px rgba(31,38,135,0.18); padding: 1.5rem; display: flex; align-items: center; justify-content: center;">
+            <img src="app/images/team/faizan.jpg" alt="CEO" style="width: 120px; border-radius: 18px; box-shadow: 0 4px 16px rgba(102, 126, 234, 0.18);">
+          </div>
+        </div>
+        <div class="ceo-text" style="flex: 3; min-width: 340px;">
+          <div class="section-header" style="margin-bottom: 1.2rem;">
+            <h2 style="font-size: 2.2rem; font-weight: 800; background: linear-gradient(135deg, #4f8cff, #764ba2, #4ecdc4); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; margin-bottom: 0.5rem;">A Message from Qbrix Solutions</h2>
+          </div>
+          <div class="ceo-quote" style="font-size: 1.18rem; font-style: italic; line-height: 1.7; background: rgba(255,255,255,0.10); border-radius: 18px; padding: 1.5rem 2rem; box-shadow: 0 2px 12px rgba(79,140,255,0.08); margin-bottom: 1.5rem; border-left: 5px solid #4f8cff;">
+            At Qbrix Solutions, we deliver AI-powered, data-driven solutions that help businesses stay ahead in a rapidly evolving tech landscape. Our expertise spans Artificial Intelligence, Machine Learning, Deep Learning, Python development, and advanced Excel automation. We partner with enterprises to build intelligent, scalable systems that drive innovation, efficiency, and real-world impact. <span style="font-weight: 600; color: #4ecdc4;">At Qubrix, we don't just code — we create the future.</span>
+          </div>
+          <div class="ceo-signature" style="margin-top: 0.5rem;">
+            <span class="ceo-name" style="font-size: 1.1rem; font-weight: 700; color: #fff;">Faizan Arshad</span><br>
+            <span class="ceo-title" style="font-size: 1rem; color: #bfc8e6;">CEO, Qbrix Solutions</span>
+          </div>
+        </div>
+      </div>
+      <!-- Decorative SVG background -->
+      <svg style="position: absolute; top: -40px; right: -80px; z-index: 1; opacity: 0.18;" width="340" height="220" viewBox="0 0 340 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <ellipse cx="170" cy="110" rx="140" ry="80" fill="#4f8cff"/>
+        <circle cx="90" cy="90" r="50" fill="#fff"/>
+        <circle cx="230" cy="130" r="40" fill="#fff"/>
+        <rect x="120" y="120" width="80" height="40" rx="18" fill="#23395d"/>
+      </svg>
+    </section>
+
     <!-- Testimonials Section -->
-    <section id="testimonials" class="testimonials">
-        <div class="container">
-            <div class="section-header fade-in">
-                <h2>What Our Clients Say</h2>
-                <p>We are trusted by startups and leading enterprises to deliver excellence.</p>
-            </div>
-            <div class="testimonial-grid">
-                <div class="testimonial-card fade-in">
-                    <p class="testimonial-text">"Qbrix Solution's AI expertise transformed our operations. Their predictive analytics model is a game-changer for our business."</p>
-                    <div class="testimonial-author">
-                        <h4 class="author-name">Alex Chen</h4>
-                        <p class="author-title">COO, Innovate Inc.</p>
-                    </div>
+    <section class="testimonials-modern" style="background: linear-gradient(135deg, #232946 0%, #181c2a 100%); padding: 80px 0; color: #fff;">
+        <div class="container" style="max-width: 1200px; margin: 0 auto;">
+            <h2 class="section-title" style="text-align: center; font-size: 2.5rem; font-weight: 800; margin-bottom: 2rem; background: linear-gradient(135deg, #4f8cff, #764ba2); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; color: #fff;">What Our Clients Say</h2>
+            <div class="testimonials-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.5rem;">
+                <div class="testimonial-card-modern" style="background: #232946; border-radius: 16px; box-shadow: 0 2px 8px rgba(102, 126, 234, 0.12); padding: 2.5rem; color: #fff; min-width: 340px;">
+                    <p style="font-size: 1.13rem; color: #bfc8e6; margin-bottom: 1.2rem; line-height: 1.7;">"Qbrix Solution delivered a custom AI solution that transformed our business. Highly recommended!"</p>
+                    <span style="color: #4f8cff; font-weight: 600;">- Alex Chen, COO</span>
                 </div>
-                <div class="testimonial-card fade-in">
-                    <p class="testimonial-text">"The machine learning solution they developed automated a critical workflow, saving us thousands of hours. Highly recommended!"</p>
-                    <div class="testimonial-author">
-                        <h4 class="author-name">Samantha Lee</h4>
-                        <p class="author-title">Director of Engineering, TechForward</p>
-                    </div>
+                <div class="testimonial-card-modern" style="background: #232946; border-radius: 16px; box-shadow: 0 2px 8px rgba(102, 126, 234, 0.12); padding: 2.5rem; color: #fff; min-width: 340px;">
+                    <p style="font-size: 1.13rem; color: #bfc8e6; margin-bottom: 1.2rem; line-height: 1.7;">"Their expertise in machine learning and automation is unmatched. We saw results fast."</p>
+                    <span style="color: #4f8cff; font-weight: 600;">- Samantha Lee, Director</span>
+                </div>
+                <div class="testimonial-card-modern" style="background: #232946; border-radius: 16px; box-shadow: 0 2px 8px rgba(102, 126, 234, 0.12); padding: 2.5rem; color: #fff; min-width: 340px;">
+                    <p style="font-size: 1.13rem; color: #bfc8e6; margin-bottom: 1.2rem; line-height: 1.7;">"Professional, innovative, and always on time. The best AI team we've worked with."</p>
+                    <span style="color: #4f8cff; font-weight: 600;">- Wolf Tim, CTO</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="portfolio">
-        <div class="container">
-            <div class="section-header fade-in">
-                <h2>Explore Our Work</h2>
-                <p>A glimpse into the innovative solutions we've delivered.</p>
-            </div>
-            <div class="portfolio-grid-modern">
-                <!-- Modern Portfolio Item 1 -->
-                <div class="portfolio-card-modern fade-in">
-                    <div class="portfolio-card-image" style="background-image: url('app/images/services/artificial-intelligence.jpg'); background-size: cover; background-position: center;">
-                        <div class="portfolio-overlay">
-                            <div class="portfolio-overlay-content">
-                                <i class="fas fa-shopping-cart"></i>
-                                <h4>E-commerce AI</h4>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="portfolio-card-content">
-                        <h3 class="portfolio-card-title">AI-Powered E-commerce</h3>
-                        <p class="portfolio-card-description">Intelligent product recommendations and inventory automation for modern online stores.</p>
-                        <div class="portfolio-tags">
-                            <span>TensorFlow</span>
-                            <span>Python</span>
-                            <span>React</span>
-                        </div>
-                    </div>
-                </div>
-                <!-- Modern Portfolio Item 2 -->
-                <div class="portfolio-card-modern fade-in">
-                    <div class="portfolio-card-image" style="background-image: url('app/images/services/data-analytics.jpg'); background-size: cover; background-position: center;">
-                        <div class="portfolio-overlay">
-                            <div class="portfolio-overlay-content">
-                                <i class="fas fa-chart-line"></i>
-                                <h4>Analytics Dashboard</h4>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="portfolio-card-content">
-                        <h3 class="portfolio-card-title">Predictive Analytics Dashboard</h3>
-                        <p class="portfolio-card-description">BI platform for sales forecasting and customer behavior analysis.</p>
-                        <div class="portfolio-tags">
-                            <span>Scikit-learn</span>
-                            <span>Django</span>
-                            <span>D3.js</span>
-                        </div>
-                    </div>
-                </div>
-                <!-- Modern Portfolio Item 3 -->
-                <div class="portfolio-card-modern fade-in">
-                    <div class="portfolio-card-image" style="background-image: url('app/images/services/machine-learning.jpg'); background-size: cover; background-position: center;">
-                        <div class="portfolio-overlay">
-                            <div class="portfolio-overlay-content">
-                                <i class="fas fa-robot"></i>
-                                <h4>ML Automation</h4>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="portfolio-card-content">
-                        <h3 class="portfolio-card-title">ML-Driven Automation</h3>
-                        <p class="portfolio-card-description">Automate workflows and improve efficiency with machine learning.</p>
-                        <div class="portfolio-tags">
-                            <span>Python</span>
-                            <span>Automation</span>
-                            <span>Data Science</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div style="text-align: center; margin-top: 40px;">
-                <a href="portfolio.html" class="btn btn-primary">View Full Portfolio</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact CTA Section -->
-    <section id="contact-cta" class="contact-cta fade-in">
-        <div class="container">
-            <div class="section-header">
-                <h2>Ready to Start Your AI Journey?</h2>
-                <p>Let's talk about how our AI and data solutions can help you achieve your business goals.</p>
-            </div>
-            <div class="contact-cta-buttons">
-                <a href="contact.html" class="btn btn-primary">Get in Touch</a>
-                <a href="portfolio.html" class="btn btn-secondary">See Our Work</a>
-            </div>
+    <!-- Contact CTA -->
+    <section id="contact" class="contact-modern" style="background: linear-gradient(135deg, #181c2a 0%, #232946 100%); padding: 80px 0; color: #fff;">
+        <div class="container" style="max-width: 600px; margin: 0 auto; text-align: center;">
+            <h2 style="font-size: 2rem; font-weight: 800; margin-bottom: 1rem; background: linear-gradient(135deg, #4f8cff, #764ba2); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; color: #fff;">Ready to Take Off with AI?</h2>
+            <p style="color: #bfc8e6; font-size: 1.1rem; margin-bottom: 2rem;">Contact us to discuss your next AI project or subscribe for updates.</p>
+            <form class="newsletter-form" style="display: flex; gap: 0.5rem; align-items: center; margin-top: 1rem;">
+                <input type="email" placeholder="Enter your email" style="flex: 1; min-width: 220px; padding: 0.9rem 1.2rem; border-radius: 25px; border: 1px solid #cbd5e1; font-size: 1.08rem; background: #232946; color: #fff;">
+                <button type="submit" class="btn btn-primary" style="padding: 0.9rem 2.2rem; font-size: 1.15rem; border-radius: 25px; font-weight: 700; letter-spacing: 0.02em;">Subscribe</button>
+            </form>
         </div>
     </section>
 
@@ -349,27 +194,27 @@
                 <div class="footer-section">
                     <h4>AI Services</h4>
                     <ul>
-                        <li><a href="services.html#ai-ml">Machine Learning</a></li>
-                        <li><a href="services.html#deep-learning">Deep Learning</a></li>
-                        <li><a href="services.html#data-analytics">Data Analytics</a></li>
-                        <li><a href="services.html#computer-vision">Computer Vision</a></li>
+                        <li><a href="services.html">Machine Learning</a></li>
+                        <li><a href="services.html">Deep Learning</a></li>
+                        <li><a href="services.html">Data Analytics</a></li>
+                        <li><a href="services.html">Computer Vision</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
                     <h4>Solutions</h4>
                     <ul>
-                        <li><a href="portfolio.html#ecommerce">AI E-commerce</a></li>
-                        <li><a href="portfolio.html#analytics">Predictive Analytics</a></li>
-                        <li><a href="portfolio.html#data-viz">Data Visualization</a></li>
-                        <li><a href="portfolio.html#ml-models">ML Models</a></li>
+                        <li><a href="portfolio.html">AI E-commerce</a></li>
+                        <li><a href="portfolio.html">Predictive Analytics</a></li>
+                        <li><a href="portfolio.html">Data Visualization</a></li>
+                        <li><a href="portfolio.html">ML Models</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
                     <h4>AI Newsletter</h4>
                     <p>Stay updated with the latest AI trends, ML insights, and data science innovations.</p>
-                    <form class="newsletter-form">
-                        <input type="email" placeholder="Enter your email" aria-label="Email for newsletter">
-                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    <form class="newsletter-form" style="display: flex; gap: 0.5rem; align-items: center; margin-top: 1rem;">
+                        <input type="email" placeholder="Enter your email" style="flex: 1; min-width: 0; padding: 0.9rem 1.2rem; border-radius: 25px; border: 1px solid #cbd5e1; font-size: 1.08rem; background: #232946; color: #fff;">
+                        <button type="submit" class="btn btn-primary" style="padding: 0.9rem 2.2rem; font-size: 1.15rem; border-radius: 25px; font-weight: 700; letter-spacing: 0.02em;">Subscribe</button>
                     </form>
                 </div>
             </div>
@@ -378,7 +223,5 @@
             </div>
         </div>
     </footer>
-
-    <script src="script.js"></script>
 </body>
 </html> 

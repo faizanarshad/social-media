@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Qbrix Solution</title>
+    <meta name="description" content="Latest insights on AI, Machine Learning, and Data Science from Qbrix Solution experts.">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🤖</text></svg>">
+</head>
+<body class="blog-page" style="background: linear-gradient(135deg, #181c2a 0%, #232946 100%); color: #fff;">
+    <!-- Navigation Bar -->
+    <nav class="navbar" style="position: fixed; top: 0; width: 100%; background: rgba(24,28,42,0.98); backdrop-filter: blur(10px); z-index: 1000; border-bottom: 1px solid rgba(255,255,255,0.08);">
+        <div class="nav-container" style="max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 20px; height: 70px;">
+            <div class="nav-logo" style="display: flex; align-items: center; gap: 0.75rem;">
+                <div class="logo-icon" style="width: 40px; height: 40px; background: linear-gradient(135deg, #4f8cff, #764ba2); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                    <i class="fas fa-brain" style="color: #fff; font-size: 1.2rem;"></i>
+                </div>
+                <h2 style="background: linear-gradient(135deg, #4f8cff, #764ba2); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: 700; font-size: 1.5rem; margin: 0;">Qbrix Solution</h2>
+            </div>
+            <ul class="nav-menu" style="display: flex; align-items: center; list-style: none; gap: 2rem; margin: 0;">
+                <li class="nav-item"><a href="index.html" class="nav-link" style="color: #fff; text-decoration: none; font-weight: 500;">Home</a></li>
+                <li class="nav-item"><a href="services.html" class="nav-link" style="color: #fff; text-decoration: none; font-weight: 500;">Services</a></li>
+                <li class="nav-item"><a href="ai-solutions.html" class="nav-link" style="color: #fff; text-decoration: none; font-weight: 500;">AI Solutions</a></li>
+                <li class="nav-item"><a href="portfolio.html" class="nav-link" style="color: #fff; text-decoration: none; font-weight: 500;">Portfolio</a></li>
+                <li class="nav-item"><a href="team.html" class="nav-link" style="color: #fff; text-decoration: none; font-weight: 500;">Team</a></li>
+                <li class="nav-item"><a href="blog.html" class="nav-link active" aria-current="page" style="color: #4ecdc4; text-decoration: none; font-weight: 500;">Blog</a></li>
+                <li class="nav-item"><a href="contact.html" class="nav-link" style="color: #fff; text-decoration: none; font-weight: 500;">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div style="height: 70px;"></div>
+
+    <!-- Blog Hero Section -->
+    <section class="blog-hero" style="background: linear-gradient(135deg, #232946 0%, #4f8cff 100%); padding: 100px 0 60px 0; text-align: center;">
+        <div class="container" style="max-width: 800px; margin: 0 auto;">
+            <h1 style="font-size: 3.5rem; font-weight: 800; margin-bottom: 1.5rem; background: linear-gradient(135deg, #4f8cff, #764ba2, #4ecdc4); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">AI Insights & Innovation</h1>
+            <p style="font-size: 1.3rem; color: #e0e6f7; margin-bottom: 2rem; line-height: 1.6;">Explore the latest trends in artificial intelligence, machine learning, and data science. Expert insights from our team of AI specialists.</p>
+            <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+                <a href="#featured" class="btn btn-primary" style="font-size: 1.1rem;">Featured Articles</a>
+                <a href="#latest" class="btn btn-secondary" style="font-size: 1.1rem;">Latest Posts</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Articles Section -->
+    <section id="featured" class="featured-articles" style="padding: 80px 0; background: linear-gradient(135deg, #181c2a 0%, #232946 100%);">
+        <div class="container" style="max-width: 1200px; margin: 0 auto;">
+            <div class="section-header" style="text-align: center; margin-bottom: 3rem;">
+                <h2 style="font-size: 2.5rem; font-weight: 800; margin-bottom: 1rem; background: linear-gradient(135deg, #4f8cff, #764ba2); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Featured Articles</h2>
+                <p style="color: #bfc8e6; font-size: 1.1rem;">In-depth analysis and expert perspectives on cutting-edge AI technologies</p>
+            </div>
+            
+            <div class="featured-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem;">
+                <!-- Featured Article 1 -->
+                <article class="blog-card-featured" style="background: #232946; border-radius: 20px; overflow: hidden; box-shadow: 0 8px 32px rgba(0,0,0,0.15);">
+                    <div class="blog-image" style="height: 200px; background: linear-gradient(135deg, #4f8cff, #764ba2); display: flex; align-items: center; justify-content: center;">
+                        <i class="fas fa-brain" style="font-size: 3rem; color: white;"></i>
+                    </div>
+                    <div class="blog-content" style="padding: 2rem;">
+                        <div class="blog-meta" style="display: flex; gap: 1rem; margin-bottom: 1rem; font-size: 0.9rem; color: #4ecdc4;">
+                            <span><i class="fas fa-calendar"></i> Dec 15, 2024</span>
+                            <span><i class="fas fa-user"></i> Faizan Arshad</span>
+                        </div>
+                        <h3 style="font-size: 1.4rem; font-weight: 700; margin-bottom: 1rem; color: #fff;">The Future of AI in Business: 2024 Trends</h3>
+                        <p style="color: #bfc8e6; margin-bottom: 1.5rem; line-height: 1.6;">Discover how artificial intelligence is reshaping business operations and what trends will dominate the industry in 2024.</p>
+                        <a href="#" class="read-more" style="color: #4f8cff; text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 0.5rem;">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Featured Article 2 -->
+                <article class="blog-card-featured" style="background: #232946; border-radius: 20px; overflow: hidden; box-shadow: 0 8px 32px rgba(0,0,0,0.15);">
+                    <div class="blog-image" style="height: 200px; background: linear-gradient(135deg, #764ba2, #4ecdc4); display: flex; align-items: center; justify-content: center;">
+                        <i class="fas fa-chart-line" style="font-size: 3rem; color: white;"></i>
+                    </div>
+                    <div class="blog-content" style="padding: 2rem;">
+                        <div class="blog-meta" style="display: flex; gap: 1rem; margin-bottom: 1rem; font-size: 0.9rem; color: #4ecdc4;">
+                            <span><i class="fas fa-calendar"></i> Dec 12, 2024</span>
+                            <span><i class="fas fa-user"></i> Zeeshan Arshad</span>
+                        </div>
+                        <h3 style="font-size: 1.4rem; font-weight: 700; margin-bottom: 1rem; color: #fff;">Machine Learning for Predictive Analytics</h3>
+                        <p style="color: #bfc8e6; margin-bottom: 1.5rem; line-height: 1.6;">Learn how machine learning algorithms can transform your data into actionable insights and predict future trends.</p>
+                        <a href="#" class="read-more" style="color: #4f8cff; text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 0.5rem;">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Featured Article 3 -->
+                <article class="blog-card-featured" style="background: #232946; border-radius: 20px; overflow: hidden; box-shadow: 0 8px 32px rgba(0,0,0,0.15);">
+                    <div class="blog-image" style="height: 200px; background: linear-gradient(135deg, #4ecdc4, #4f8cff); display: flex; align-items: center; justify-content: center;">
+                        <i class="fas fa-network-wired" style="font-size: 3rem; color: white;"></i>
+                    </div>
+                    <div class="blog-content" style="padding: 2rem;">
+                        <div class="blog-meta" style="display: flex; gap: 1rem; margin-bottom: 1rem; font-size: 0.9rem; color: #4ecdc4;">
+                            <span><i class="fas fa-calendar"></i> Dec 10, 2024</span>
+                            <span><i class="fas fa-user"></i> Muhammad Usman</span>
+                        </div>
+                        <h3 style="font-size: 1.4rem; font-weight: 700; margin-bottom: 1rem; color: #fff;">Deep Learning: From Theory to Practice</h3>
+                        <p style="color: #bfc8e6; margin-bottom: 1.5rem; line-height: 1.6;">A comprehensive guide to implementing deep learning solutions in real-world applications.</p>
+                        <a href="#" class="read-more" style="color: #4f8cff; text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 0.5rem;">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Latest Posts Section -->
+    <section id="latest" class="latest-posts" style="padding: 80px 0; background: linear-gradient(135deg, #232946 0%, #181c2a 100%);">
+        <div class="container" style="max-width: 1200px; margin: 0 auto;">
+            <div class="section-header" style="text-align: center; margin-bottom: 3rem;">
+                <h2 style="font-size: 2.5rem; font-weight: 800; margin-bottom: 1rem; background: linear-gradient(135deg, #4f8cff, #764ba2); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Latest Posts</h2>
+                <p style="color: #bfc8e6; font-size: 1.1rem;">Stay updated with our latest insights and technical articles</p>
+            </div>
+            
+            <div class="blog-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                <!-- Blog Post 1 -->
+                <article class="blog-card" style="background: #232946; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 16px rgba(0,0,0,0.1);">
+                    <div class="blog-image-small" style="height: 160px; background: linear-gradient(135deg, #4f8cff, #764ba2); display: flex; align-items: center; justify-content: center;">
+                        <i class="fas fa-robot" style="font-size: 2.5rem; color: white;"></i>
+                    </div>
+                    <div class="blog-content" style="padding: 1.5rem;">
+                        <div class="blog-meta" style="display: flex; gap: 1rem; margin-bottom: 0.8rem; font-size: 0.85rem; color: #4ecdc4;">
+                            <span><i class="fas fa-calendar"></i> Dec 8, 2024</span>
+                            <span><i class="fas fa-tag"></i> Automation</span>
+                        </div>
+                        <h3 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 0.8rem; color: #fff;">AI-Powered Automation Solutions</h3>
+                        <p style="color: #bfc8e6; margin-bottom: 1rem; line-height: 1.5; font-size: 0.95rem;">How intelligent automation is revolutionizing business processes and increasing efficiency.</p>
+                        <a href="#" class="read-more" style="color: #4f8cff; text-decoration: none; font-weight: 600; font-size: 0.9rem;">Read More →</a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 2 -->
+                <article class="blog-card" style="background: #232946; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 16px rgba(0,0,0,0.1);">
+                    <div class="blog-image-small" style="height: 160px; background: linear-gradient(135deg, #764ba2, #4ecdc4); display: flex; align-items: center; justify-content: center;">
+                        <i class="fas fa-eye" style="font-size: 2.5rem; color: white;"></i>
+                    </div>
+                    <div class="blog-content" style="padding: 1.5rem;">
+                        <div class="blog-meta" style="display: flex; gap: 1rem; margin-bottom: 0.8rem; font-size: 0.85rem; color: #4ecdc4;">
+                            <span><i class="fas fa-calendar"></i> Dec 6, 2024</span>
+                            <span><i class="fas fa-tag"></i> Computer Vision</span>
+                        </div>
+                        <h3 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 0.8rem; color: #fff;">Computer Vision in Manufacturing</h3>
+                        <p style="color: #bfc8e6; margin-bottom: 1rem; line-height: 1.5; font-size: 0.95rem;">Implementing computer vision for quality control and defect detection in production lines.</p>
+                        <a href="#" class="read-more" style="color: #4f8cff; text-decoration: none; font-weight: 600; font-size: 0.9rem;">Read More →</a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 3 -->
+                <article class="blog-card" style="background: #232946; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 16px rgba(0,0,0,0.1);">
+                    <div class="blog-image-small" style="height: 160px; background: linear-gradient(135deg, #4ecdc4, #4f8cff); display: flex; align-items: center; justify-content: center;">
+                        <i class="fas fa-comments" style="font-size: 2.5rem; color: white;"></i>
+                    </div>
+                    <div class="blog-content" style="padding: 1.5rem;">
+                        <div class="blog-meta" style="display: flex; gap: 1rem; margin-bottom: 0.8rem; font-size: 0.85rem; color: #4ecdc4;">
+                            <span><i class="fas fa-calendar"></i> Dec 4, 2024</span>
+                            <span><i class="fas fa-tag"></i> NLP</span>
+                        </div>
+                        <h3 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 0.8rem; color: #fff;">Natural Language Processing Trends</h3>
+                        <p style="color: #bfc8e6; margin-bottom: 1rem; line-height: 1.5; font-size: 0.95rem;">Latest developments in NLP and how they're transforming communication systems.</p>
+                        <a href="#" class="read-more" style="color: #4f8cff; text-decoration: none; font-weight: 600; font-size: 0.9rem;">Read More →</a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 4 -->
+                <article class="blog-card" style="background: #232946; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 16px rgba(0,0,0,0.1);">
+                    <div class="blog-image-small" style="height: 160px; background: linear-gradient(135deg, #4f8cff, #764ba2); display: flex; align-items: center; justify-content: center;">
+                        <i class="fas fa-database" style="font-size: 2.5rem; color: white;"></i>
+                    </div>
+                    <div class="blog-content" style="padding: 1.5rem;">
+                        <div class="blog-meta" style="display: flex; gap: 1rem; margin-bottom: 0.8rem; font-size: 0.85rem; color: #4ecdc4;">
+                            <span><i class="fas fa-calendar"></i> Dec 2, 2024</span>
+                            <span><i class="fas fa-tag"></i> Data Science</span>
+                        </div>
+                        <h3 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 0.8rem; color: #fff;">Data Science Best Practices</h3>
+                        <p style="color: #bfc8e6; margin-bottom: 1rem; line-height: 1.5; font-size: 0.95rem;">Essential practices for building robust and scalable data science solutions.</p>
+                        <a href="#" class="read-more" style="color: #4f8cff; text-decoration: none; font-weight: 600; font-size: 0.9rem;">Read More →</a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 5 -->
+                <article class="blog-card" style="background: #232946; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 16px rgba(0,0,0,0.1);">
+                    <div class="blog-image-small" style="height: 160px; background: linear-gradient(135deg, #764ba2, #4ecdc4); display: flex; align-items: center; justify-content: center;">
+                        <i class="fas fa-chart-bar" style="font-size: 2.5rem; color: white;"></i>
+                    </div>
+                    <div class="blog-content" style="padding: 1.5rem;">
+                        <div class="blog-meta" style="display: flex; gap: 1rem; margin-bottom: 0.8rem; font-size: 0.85rem; color: #4ecdc4;">
+                            <span><i class="fas fa-calendar"></i> Nov 30, 2024</span>
+                            <span><i class="fas fa-tag"></i> Analytics</span>
+                        </div>
+                        <h3 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 0.8rem; color: #fff;">Advanced Analytics with AI</h3>
+                        <p style="color: #bfc8e6; margin-bottom: 1rem; line-height: 1.5; font-size: 0.95rem;">Combining traditional analytics with AI for deeper business insights.</p>
+                        <a href="#" class="read-more" style="color: #4f8cff; text-decoration: none; font-weight: 600; font-size: 0.9rem;">Read More →</a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 6 -->
+                <article class="blog-card" style="background: #232946; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 16px rgba(0,0,0,0.1);">
+                    <div class="blog-image-small" style="height: 160px; background: linear-gradient(135deg, #4ecdc4, #4f8cff); display: flex; align-items: center; justify-content: center;">
+                        <i class="fas fa-shield-alt" style="font-size: 2.5rem; color: white;"></i>
+                    </div>
+                    <div class="blog-content" style="padding: 1.5rem;">
+                        <div class="blog-meta" style="display: flex; gap: 1rem; margin-bottom: 0.8rem; font-size: 0.85rem; color: #4ecdc4;">
+                            <span><i class="fas fa-calendar"></i> Nov 28, 2024</span>
+                            <span><i class="fas fa-tag"></i> Security</span>
+                        </div>
+                        <h3 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 0.8rem; color: #fff;">AI Security and Privacy</h3>
+                        <p style="color: #bfc8e6; margin-bottom: 1rem; line-height: 1.5; font-size: 0.95rem;">Ensuring security and privacy in AI-powered applications and systems.</p>
+                        <a href="#" class="read-more" style="color: #4f8cff; text-decoration: none; font-weight: 600; font-size: 0.9rem;">Read More →</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Subscription -->
+    <section class="blog-newsletter" style="padding: 80px 0; background: linear-gradient(135deg, #181c2a 0%, #232946 100%); text-align: center;">
+        <div class="container" style="max-width: 600px; margin: 0 auto;">
+            <h2 style="font-size: 2.2rem; font-weight: 800; margin-bottom: 1rem; background: linear-gradient(135deg, #4f8cff, #764ba2); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Stay Updated</h2>
+            <p style="color: #bfc8e6; font-size: 1.1rem; margin-bottom: 2rem;">Get the latest AI insights and technical articles delivered to your inbox.</p>
+            <form class="newsletter-form" style="display: flex; gap: 0.5rem; justify-content: center; align-items: center;">
+                <input type="email" placeholder="Enter your email" style="flex: 1; min-width: 220px; padding: 0.9rem 1.2rem; border-radius: 25px; border: 1px solid #cbd5e1; font-size: 1.08rem; background: #232946; color: #fff;">
+                <button type="submit" class="btn btn-primary" style="padding: 0.9rem 2.2rem; font-size: 1.15rem; border-radius: 25px; font-weight: 700; letter-spacing: 0.02em;">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Qbrix Solution</h3>
+                    <p>Leading AI and data science software house specializing in machine learning, deep learning, data analytics, and intelligent e-commerce solutions.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>AI Services</h4>
+                    <ul>
+                        <li><a href="services.html">Machine Learning</a></li>
+                        <li><a href="services.html">Deep Learning</a></li>
+                        <li><a href="services.html">Data Analytics</a></li>
+                        <li><a href="services.html">Computer Vision</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Solutions</h4>
+                    <ul>
+                        <li><a href="portfolio.html">AI E-commerce</a></li>
+                        <li><a href="portfolio.html">Predictive Analytics</a></li>
+                        <li><a href="portfolio.html">Data Visualization</a></li>
+                        <li><a href="portfolio.html">ML Models</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>AI Newsletter</h4>
+                    <p>Stay updated with the latest AI trends, ML insights, and data science innovations.</p>
+                    <form class="newsletter-form" style="display: flex; gap: 0.5rem; align-items: center; margin-top: 1rem;">
+                        <input type="email" placeholder="Enter your email" style="flex: 1; min-width: 220px; padding: 0.9rem 1.2rem; border-radius: 25px; border: 1px solid #cbd5e1; font-size: 1.08rem; background: #232946; color: #fff;">
+                        <button type="submit" class="btn btn-primary" style="padding: 0.9rem 2.2rem; font-size: 1.15rem; border-radius: 25px; font-weight: 700; letter-spacing: 0.02em;">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Qbrix Solution - AI & Data Science Specialists. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
