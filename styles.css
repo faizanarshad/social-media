@@ -2036,8 +2036,15 @@ body {
     color: #bfc8e6;
 }
 .newsletter-form .btn {
-    padding: 0.75rem 1.5rem;
-    font-size: 0.9rem;
+    padding: 0.75rem 2.2rem;
+    font-size: 1rem;
+    min-width: 120px;
+    width: auto;
+    white-space: nowrap;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .footer-bottom {
     text-align: center;
@@ -2423,4 +2430,35 @@ body {
 .portfolio-page .portfolio-grid-modern,
 .portfolio-page .portfolio-grid-modern * {
   color: #232323 !important;
+}
+
+.portfolio-tags {
+  display: flex;
+  align-items: center;
+  gap: 0.3em;
+}
+.portfolio-tags span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.28em 0.85em;
+  margin: 0.18em 0.25em 0.18em 0;
+  border-radius: 1.5em;
+  font-size: 0.97em;
+  font-weight: 600;
+  color: #fff;
+  background: rgba(255,255,255,0.85);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  letter-spacing: 0.02em;
+  transition: background 0.3s, transform 0.2s;
+  border: none;
+  height: 2.2em;
+  min-width: 2.2em;
+}
+.portfolio-tags span img {
+  display: block;
+  margin: 0 auto;
+  filter: none;
+  height: 1.3em;
+  width: auto;
 }
