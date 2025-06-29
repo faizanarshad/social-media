@@ -1,0 +1,22 @@
+/*
+Theme Name: Qbrik AI Solutions
+Description: Custom WordPress theme for Qbrik AI Solutions website
+Version: 1.0
+Author: Qbrik Team
+*/
+
+/* Import your existing styles */
+@import url('styles.css');
+
+/* WordPress-specific styles */
+.wp-block {
+    max-width: 1200px;
+}
+
+.alignwide {
+    max-width: 1200px;
+}
+
+.alignfull {
+    max-width: none;
+} 
