@@ -356,6 +356,7 @@ class WebsiteEnhancer {
         
         const animateCounter = (counter) => {
             const target = parseInt(counter.getAttribute('data-target'));
+            const originalText = counter.textContent;
             const duration = 2000; // 2 seconds
             const step = target / (duration / 16); // 60fps
             let current = 0;
@@ -366,7 +367,17 @@ class WebsiteEnhancer {
                     current = target;
                     clearInterval(timer);
                 }
-                counter.textContent = Math.floor(current);
+                
+                // Handle special cases
+                if (originalText.includes('/7')) {
+                    counter.textContent = Math.floor(current) + '/7';
+                } else if (originalText.includes('x')) {
+                    counter.textContent = Math.floor(current) + 'x';
+                } else if (originalText.includes('%')) {
+                    counter.textContent = Math.floor(current) + '%';
+                } else {
+                    counter.textContent = Math.floor(current);
+                }
             }, 16);
         };
         
